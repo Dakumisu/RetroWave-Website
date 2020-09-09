@@ -1,0 +1,41 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  height: 100vh;
+  font-family: "RoadRage";
+  font-weight: 700;
+  color: red;
+}
+
+h1 {
+  font-family: "RoadRage";
+}
+
+img {
+  position: fixed;
+  width: 100%;
+  top: 30%;
+  -webkit-transition: top 1s;
+  transition: top 1s;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+
+@font-face {
+  font-family: "RoadRage";
+  src: url("./data/font/Montserrat-Bold.ttf");
+}
+/*# sourceMappingURL=main.css.map */
