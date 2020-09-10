@@ -92,22 +92,22 @@ h2 {
 }
 
 .link {
+    animation: bouton 1.5s ease-in-out alternate infinite;
     position: absolute;
     width: auto;
     text-align: center;
-    top: 83%; left: 50%;
-    transform: translate(-50%, -50%); 
+    top: 83%; left: 50%; 
     z-index: 11;
     overflow: hidden;
     transition: 0.2s ease;
     &:hover {
         box-shadow: 0 0 10px $jaune, 0 0 40px $jaune, 0 0 80px $jaune;
-        transition-delay: 1s;
+        transition-delay: 0.2s;
         background-color: $jaune;
     }
     a {
         padding: 1.1em 2em;
-        text-decoration: none;
+        text-decoration: none; 
         font-size: 1.3em;
         display: inline-block;
         color: $jaune;
@@ -117,61 +117,61 @@ h2 {
         transition: 0.2s ease;
         &:hover {
             color: #847625;
-            transition-delay: 1s;
-            span {
-                &:nth-child(1) { //haut
-                    left: 100%;
-                    transition: 1s;
-                }
-                &:nth-child(3) { //bas
-                    right: 100%;
-                    transition: 1s;
-                    transition-delay: 0.5s;
-                }
-                &:nth-child(2) { //droite
-                    top: 100%;
-                    transition: 1s;
-                    transition-delay: 0.25s;
-                }
-                &:nth-child(4) { //gauche
-                    bottom: 100%;
-                    transition: 1s;
-                    transition-delay: 0.75s;
-                }
-            }
+            transition-delay: 0.2s;
+            // span {
+            //     &:nth-child(1) { //haut
+            //         left: 100%;
+            //         transition: 1s;
+            //     }
+            //     &:nth-child(3) { //bas
+            //         right: 100%;
+            //         transition: 1s;
+            //         transition-delay: 0.5s;
+            //     }
+            //     &:nth-child(2) { //droite
+            //         top: 100%;
+            //         transition: 1s;
+            //         transition-delay: 0.25s;
+            //     }
+            //     &:nth-child(4) { //gauche
+            //         bottom: 100%;
+            //         transition: 1s;
+            //         transition-delay: 0.75s;
+            //     }
+            // }
         }
-        span {
-            position: absolute;
-            display: block;
-            &:nth-child(1) { //haut
-                top: 0;
-                left: -100%;
-                width: 100%;
-                height: 2px;
-                background: linear-gradient(90deg, transparent, $jaune);
-            }
-            &:nth-child(3) { //bas
-                bottom: 0;
-                right: -100%;
-                width: 100%;
-                height: 2px;
-                background: linear-gradient(270deg, transparent, $jaune);
-            }
-            &:nth-child(2) { //droite
-                top: -100%;
-                right: 0;
-                width: 100%;
-                height: 2px;
-                background: linear-gradient(180deg, transparent, $jaune);
-            }
-            &:nth-child(2) { //gauche
-                bottom: -100%;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background: linear-gradient(360deg, transparent, $jaune);
-            }
-        }
+        // span {
+        //     position: absolute;
+        //     display: block;
+        //     &:nth-child(1) { //haut
+        //         top: 0;
+        //         left: -100%;
+        //         width: 100%;
+        //         height: 2px;
+        //         background: linear-gradient(90deg, transparent, $jaune);
+        //     }
+        //     &:nth-child(3) { //bas
+        //         bottom: 0;
+        //         right: -100%;
+        //         width: 100%;
+        //         height: 2px;
+        //         background: linear-gradient(270deg, transparent, $jaune);
+        //     }
+        //     &:nth-child(2) { //droite
+        //         top: -100%;
+        //         right: 0;
+        //         width: 100%;
+        //         height: 2px;
+        //         background: linear-gradient(180deg, transparent, $jaune);
+        //     }
+        //     &:nth-child(2) { //gauche
+        //         bottom: -100%;
+        //         left: 0;
+        //         width: 100%;
+        //         height: 2px;
+        //         background: linear-gradient(360deg, transparent, $jaune);
+        //     }
+        // }
     }
 }
 
@@ -206,6 +206,15 @@ h2 {
 @media only screen and (min-width: 1500px) {
     img {
         top: -10%;
+    }
+}
+
+@keyframes bouton {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(-50%, -60%);
     }
 }
 
