@@ -112,6 +112,13 @@ h2 {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
   background-color: #F9C80E;
+  cursor: pointer;
+}
+
+.link:hover a {
+  color: #847625;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 .link a {

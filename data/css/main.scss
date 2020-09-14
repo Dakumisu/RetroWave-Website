@@ -104,6 +104,11 @@ h2 {
         box-shadow: 0 0 10px $jaune, 0 0 40px $jaune, 0 0 80px $jaune;
         transition-delay: 0.2s;
         background-color: $jaune;
+        cursor: pointer;
+        a{
+            color: #847625;
+            transition-delay: 0.2s;
+        }
     }
     a {
         padding: 1.1em 2em;
