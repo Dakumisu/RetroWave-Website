@@ -1,5 +1,6 @@
 $jaune : #F9C80E;
 $rouge : #ff4365;
+$violet : #791E94;
 
 *,
 *:before,
@@ -30,7 +31,7 @@ img {
     z-index: 10;
 }
 
-h1 {
+.title_retro {
     background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #859ee2 51%, #d5ebfb 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebf1f6', endColorstr='#d5ebfb', GradientType=0);
     -webkit-background-clip: text;
@@ -65,7 +66,7 @@ h1 {
     }
 }
 
-h2 {
+.title_trend {
     text-shadow: 1px -1px 0 rgba(255, 255, 255, 0.5),
         2px 1px 2px rgba(255, 0, 255, 0.85),
         -3px -2px 3px rgba(0, 0, 255, 0.85),
@@ -112,7 +113,7 @@ h2 {
     }
 }
 
-#start-screen {
+#bg {
     top: 0;
     left: 0;
     width: 100%;
@@ -231,13 +232,68 @@ h2 {
         #plane-wrapper #plane #horizontal-lines {
             animation: event_horizon 10s infinite linear;
         }
+    }
+}
 
-        #start-btn {
-            animation: blink 800ms step-start 0s infinite
+.infos {
+    .t1 {
+        z-index: 12;
+        left: 15px;
+        top: 15px;
+    }
+
+    .t2 {
+        z-index: 11;
+    }
+    
+    svg {
+    position: absolute;
+        path {
+            color: $jaune;
+            transition: all 0.5s ease;
+            &:hover {
+                cursor: pointer;
+                transition: all 0.5s ease;
+                box-shadow: 0 0 10px $jaune, 0 0 40px $jaune, 0 0 80px $jaune;
+                color: white;
+            }
         }
     }
 }
 
+.container {
+    position: absolute;
+    display: grid;
+    padding: 0;
+    margin: 0;
+    width: 1678px;
+    height: 780px;
+    left: 150px;
+    top: 130px;
+    background: $violet;
+    box-shadow: 0px 0px 30px #ce1ed1;
+    z-index: 15;
+    .left-side {
+        width: 45%;
+        background-color: #fff;
+        h2 {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .right-side {
+        width: 45%;
+        background-color: blue;
+        &_container {
+            .photo {
+                img {
+                    width: 500px;
+                    //height: 500px;
+                }
+            }
+        }
+    }
+}
 
 @keyframes event_horizon {
     0% {
@@ -295,6 +351,27 @@ h2 {
     }
 }
 
+@media all and (min-width:768px) and (min-height:580px) {
+    #start-screen #plane {
+        -webkit-transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1);
+        transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1)
+    }
+
+    #start-screen #start-btn {
+        margin: 40px 0 0
+    }
+
+    #start-screen h3 {
+        bottom: 32px
+    }
+}
+
+@media all and (min-height:720px) {
+    #start-screen #plane {
+        -webkit-perspective: 360px;
+        perspective: 360px
+    }
+}
 
 @font-face {
     font-family: "RoadRage";
