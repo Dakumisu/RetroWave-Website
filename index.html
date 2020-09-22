@@ -13,14 +13,17 @@
     <meta name="publisher" content="IUT DE TARBES - MMI" />
     <title>RetroWave's Trend</title>
     <link rel="stylesheet" href="./data/css/main.css" type="text/css" />
+    <script type="text/javascript" src="./data/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./data/js/main.js"></script>
     <link rel="icon" href="favicon.png" />
 </head>
 
 <body>
 
     <div class="infos">
-        <h2>?</h2>
-        <svg opacity= 0 class="t2" width="143" height="147" viewBox="0 0 143 147" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <h2 id="a_propos">?</h2>
+        <svg id="popup__close" style="opacity: 0; pointer-events: none; z-index: 19" width="143" height="147" viewBox="0 0 143 147" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d)">
                 <path d="M104.951 54.6003L60.3503 131.85L15.75 54.6003L104.951 54.6003Z" fill="currentColor" />
             </g>
@@ -38,11 +41,12 @@
             </defs>
         </svg>
 
-        <svg class="t1" width="113" height="117" viewBox="0 0 113 117" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <svg id="popup__open" style="opacity: 1; pointer-events: auto; z-index: 20" width="113" height="117" viewBox="0 0 113 117" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
             <path d="M89.9506 39.6003L45.3503 116.85L0.750003 39.6003L89.9506 39.6003Z" fill="currentColor" />
         </svg>
 
-        <section class="container">
+        <section class="container-popup" style="opacity: 0; pointer-events: none">
             <div class="left-side">
                 <div class="titre">
                     <h2>RetroWave's Trending</h2>
@@ -62,7 +66,9 @@
                         <img src="./data/img/cabibi.jpg" alt="">
                     </div>
                     <div class="texte">
-    
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nam debitis eos, explicabo sit
+                        pariatur corrupti nihil, beatae accusamus perferendis modi libero recusandae unde! Sapiente
+                        reiciendis possimus praesentium error aliquam.
                     </div>
                 </div>
             </div>

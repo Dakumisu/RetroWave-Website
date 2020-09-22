@@ -13,6 +13,7 @@ body {
     background-color: #000;
     height: 100vh;
     font-family: "Road Rage";
+    font-size: 16px;
 }
 
 img {
@@ -72,7 +73,7 @@ img {
         -3px -2px 3px rgba(0, 0, 255, 0.85),
         1px -2px 0 rgba(255, 255, 255, 0.8);
     color: rgb(255, 0, 234);
-    font-size: 2em;
+    font-size: 3.1em;
     transform: rotateZ(-15deg);
     position: absolute;
     font-family: Lazer84;
@@ -229,25 +230,44 @@ img {
         }
     }
     &.event-horizon {
-        #plane-wrapper #plane #horizontal-lines {
-            animation: event_horizon 10s infinite linear;
+        #plane-wrapper {
+            #plane {
+                #horizontal-lines {
+                    animation: event_horizon 10s infinite linear;
+                }
+            }
         }
     }
 }
 
 .infos {
-    .t1 {
-        z-index: 12;
-        left: 15px;
-        top: 15px;
+    position: absolute;
+    left: 3%;
+    #a_propos {
+        position: absolute;
+        margin: 0;
+        pointer-events: none;
+        font-size: 3em;
+        z-index: 21;
+        color: white;
+        top: 8vh;
+        left: 35px;
     }
 
-    .t2 {
-        z-index: 11;
+    #popup{
+        transition: all .5s ease;
+        &__open {
+        }
+        &__close {
+            left: -15px;
+            top: 3.5vh;
+        }
     }
     
     svg {
     position: absolute;
+    top: 5vh;
+    // left: 3%;
         path {
             color: $jaune;
             transition: all 0.5s ease;
@@ -255,44 +275,67 @@ img {
                 cursor: pointer;
                 transition: all 0.5s ease;
                 box-shadow: 0 0 10px $jaune, 0 0 40px $jaune, 0 0 80px $jaune;
-                color: white;
+                color: lighten($jaune, 20%);
+            }
+        }
+    }
+
+    .container-popup {
+        transition: all 1s ease-in-out;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        width: 80vw;
+        height: 75vh;
+        left: 8vw;
+        top: 15vh;
+        background: $violet;
+        box-shadow: 0px 0px 30px #ce1ed1;
+        z-index: 15;
+        .left-side {
+            width: 50%;
+            height: 75vh;
+            padding: 3%;
+            position: relative;
+            // background-color: #fff;
+            h2 {
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .right-side {
+            width: 50%;
+            height: 75vh;
+            padding: 3%;
+            position: relative;
+            
+            // background-color: blue;
+            &_container {
+                text-align: center;
+                .photo {
+                    img {
+                        margin-top: 5vh;
+                        width: 60%;
+                        position: relative;
+                    }
+                }
+    
+                .texte {
+                    width: 75%;
+                    margin: auto;
+                    margin-top: 5vh;
+                }
             }
         }
     }
 }
 
-.container {
-    position: absolute;
-    display: grid;
-    padding: 0;
-    margin: 0;
-    width: 1678px;
-    height: 780px;
-    left: 150px;
-    top: 130px;
-    background: $violet;
-    box-shadow: 0px 0px 30px #ce1ed1;
-    z-index: 15;
-    .left-side {
-        width: 45%;
-        background-color: #fff;
-        h2 {
-            padding: 0;
-            margin: 0;
-        }
-    }
-    .right-side {
-        width: 45%;
-        background-color: blue;
-        &_container {
-            .photo {
-                img {
-                    width: 500px;
-                    //height: 500px;
-                }
-            }
-        }
-    }
+
+::selection {
+    background-color: rgba(255, 152, 241, 0.418);
+    color: white;
 }
 
 @keyframes event_horizon {
@@ -374,6 +417,15 @@ img {
 }
 
 @font-face {
-    font-family: "RoadRage";
-    src: url("./data/font/Road_Rage.ttf");
+    font-family: 'RoadRage';
+    font-style: normal;
+    font-weight: normal;
+    src: local('RoadRage'), url('./data/font/Road_Rage.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'RoadRage';
+    font-style: normal;
+    font-weight: normal;
+    src: local('RoadRage'), url('./data/font/Road_Rage.ttf') format('ttf');
 }
