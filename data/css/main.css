@@ -341,8 +341,18 @@ img {
 }
 
 .infos .container-popup .left-side h2 {
+  font-size: 3.4em;
+  color: #F9C80E;
+  text-shadow: 0px 0px 30px #F9C80E;
   padding: 0;
   margin: 0;
+}
+
+.infos .container-popup .left-side .theme h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  color: #ff4365;
 }
 
 .infos .container-popup .right-side {

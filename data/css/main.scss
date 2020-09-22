@@ -2,6 +2,7 @@ $jaune : #F9C80E;
 $rouge : #ff4365;
 $violet : #791E94;
 
+
 *,
 *:before,
 *:after {
@@ -256,8 +257,7 @@ img {
 
     #popup{
         transition: all .5s ease;
-        &__open {
-        }
+        
         &__close {
             left: -15px;
             top: 3.5vh;
@@ -301,8 +301,21 @@ img {
             position: relative;
             // background-color: #fff;
             h2 {
-                padding: 0;
-                margin: 0;
+                @include title ($jaune);
+                // font-size: 3.4em;
+                // color: $jaune;
+                // text-shadow: 0px 0px 30px $jaune;
+                // padding: 0;
+                // margin: 0;
+            }
+            .theme {
+                h3 {
+                    @include subtitle ($rouge);
+                    // margin: 0;
+                    // padding: 0;
+                    // font-size: 2em;
+                    // color: $rouge;
+                }
             }
         }
         .right-side {
@@ -414,6 +427,23 @@ img {
         -webkit-perspective: 360px;
         perspective: 360px
     }
+}
+
+@mixin title ($color) {
+    margin: 0;
+    padding: 0;
+    color: $color;
+    font-size: 3.4em;
+    text-shadow: 0px 0px 30px $color;
+}
+
+@mixin subtitle ($color) {
+    margin: 0;
+    margin-top: 5%;
+    padding: 0;
+    color: $color;
+    font-size: 2em;
+    text-shadow: 0px 0px 30px $color;
 }
 
 @font-face {
