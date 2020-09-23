@@ -57,7 +57,7 @@ $(document).ready(function () {
           slides.style.transform = "translateX(-0%)";
           e.target.classList.add("active");
         } else {
-          slides.style.transform = "translateX(-57%)";
+          slides.style.transform = "translateX(-60%)";
           e.target.classList.add("active");
         }
       }

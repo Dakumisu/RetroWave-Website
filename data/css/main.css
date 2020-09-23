@@ -78,7 +78,6 @@ img {
 .title_trend {
   text-shadow: 1px -1px 0 rgba(255, 255, 255, 0.5), 2px 1px 2px rgba(255, 0, 255, 0.85), -3px -2px 3px rgba(0, 0, 255, 0.85), 1px -2px 0 rgba(255, 255, 255, 0.8);
   color: #ff00ea;
-  font-size: 3.1em;
   -webkit-transform: rotateZ(-15deg);
           transform: rotateZ(-15deg);
   position: absolute;
@@ -356,6 +355,13 @@ img {
   color: #F9C80E;
   font-size: 3.4em;
   text-shadow: 0px 0px 30px #F9C80E;
+  text-align: center;
+}
+
+@media only screen and (min-width: 80vw) {
+  .infos .container-popup .left-side h2 {
+    font-size: 3em;
+  }
 }
 
 .infos .container-popup .left-side .theme {
@@ -380,21 +386,14 @@ img {
 
 .infos .container-popup .right-side_container {
   text-align: center;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
 }
 
-.infos .container-popup .right-side_container .photo img {
-  margin-top: 5vh;
-  width: 60%;
-  position: relative;
-}
-
-.infos .container-popup .right-side_container .texte {
-  width: 75%;
-  margin: auto;
-  margin-top: 5vh;
-}
-
-.wrapper {
+.infos .container-popup .right-side_container .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,7 +402,7 @@ img {
   width: 100%;
 }
 
-.wrapper > .inner {
+.infos .container-popup .right-side_container .wrapper > .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,43 +411,53 @@ img {
   transition: all 0.5s ease-in-out;
 }
 
-.card > img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 17.5em;
+.infos .container-popup .right-side_container .card {
+  width: 30vw;
+  height: 60vh;
 }
 
-.card > .content {
+.infos .container-popup .right-side_container .card img {
+  position: relative;
+  margin: auto;
+  width: 20em;
+}
+
+.infos .container-popup .right-side_container .card .content {
   padding: 1em;
   text-align: center;
 }
 
-.card > .content > h1, .card > .content > h3 {
-  margin: 0.35em 0;
+.infos .container-popup .right-side_container .card .content h2 {
+  margin: 0;
+  margin-top: 1%;
+  padding: 0;
+  color: #F9C80E;
+  font-size: 2em;
+  text-shadow: 0px 0px 30px #F9C80E;
 }
 
-.card > .content > h1 {
-  color: #fff;
-  font-size: 1.25rem;
-  line-height: 1;
+.infos .container-popup .right-side_container .card .content h3 {
+  margin: 0;
+  margin-top: 1%;
+  padding: 0;
+  color: #ff4365;
+  font-size: 1em;
+  text-shadow: 0px 0px 30px #ff4365;
 }
 
-.card > .content > h3 {
-  color: #ccc;
-  font-size: 0.9rem;
-  font-weight: 300;
-}
-
-.map {
+.infos .container-popup .right-side_container .map {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
   margin-top: 1em;
 }
 
-.map > button {
+.infos .container-popup .right-side_container .map > button {
   all: unset;
-  background: #fad340;
+  background: #cfa505;
+  -webkit-box-shadow: 0 0 10px #F9C80E, 0 0 40px #F9C80E, 0 0 80px #F9C80E;
+          box-shadow: 0 0 10px #F9C80E, 0 0 40px #F9C80E, 0 0 80px #F9C80E;
   cursor: pointer;
-  margin: 0 0.125em;
+  margin: 0 0.5em;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -459,8 +468,8 @@ img {
   width: 1em;
 }
 
-.map > button.active:after {
-  background: #791E94;
+.infos .container-popup .right-side_container .map > button.active:after {
+  background: #fad340;
   content: "";
   left: 50%;
   position: absolute;
@@ -534,7 +543,7 @@ img {
     font-size: 4em;
   }
   h2 {
-    font-size: 3.5em;
+    font-size: 3.1em;
   }
 }
 
@@ -557,20 +566,14 @@ img {
 }
 
 @media all and (min-width: 768px) and (min-height: 580px) {
-  #start-screen #plane {
+  #plane {
     -webkit-transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1);
     transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1);
-  }
-  #start-screen #start-btn {
-    margin: 40px 0 0;
-  }
-  #start-screen h3 {
-    bottom: 32px;
   }
 }
 
 @media all and (min-height: 720px) {
-  #start-screen #plane {
+  #plane {
     -webkit-perspective: 360px;
     perspective: 360px;
   }

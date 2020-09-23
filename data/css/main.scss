@@ -8,14 +8,18 @@ $violet : #791E94;
     color: $color;
     font-size: 3.4em;
     text-shadow: 0px 0px 30px $color;
+    text-align: center;
+    @media only screen and (min-width: 80vw) {
+        font-size: 3em;
+    }
 }
 
-@mixin subtitle($color) {
+@mixin subtitle($color, $mt:5%, $fs:2em) {
     margin: 0;
-    margin-top: 5%;
+    margin-top: $mt;
     padding: 0;
     color: $color;
-    font-size: 2em;
+    font-size: $fs;
     text-shadow: 0px 0px 30px $color;
 }
 
@@ -104,7 +108,6 @@ img {
         -3px -2px 3px rgba(0, 0, 255, 0.85),
         1px -2px 0 rgba(255, 255, 255, 0.8);
     color: rgb(255, 0, 234);
-    font-size: 3.1em;
     transform: rotateZ(-15deg);
     position: absolute;
     font-family: Lazer84;
@@ -337,7 +340,7 @@ img {
                 margin-top: 5%;
             }
             h3 {
-                @include subtitle($rouge);
+                @include subtitle($rouge, 5%);
             }
         }
         .right-side {
@@ -348,91 +351,79 @@ img {
             // background-color: blue;
             &_container {
                 text-align: center;
-                .photo {
-                    img {
-                        margin-top: 5vh;
-                        width: 60%;
-                        position: relative;
+                display: block;
+                justify-content: center;
+                padding: 30px;
+
+                //Carousel
+                .wrapper {
+                    display: flex;
+                    grid-gap: 1em;
+                    overflow: hidden;
+                    width: 100%;
+                    & > .inner {
+                      display: flex;
+                      grid-gap: 25em;
+                      transition: all 0.5s ease-in-out;
                     }
                 }
-    
-                .texte {
-                    width: 75%;
-                    margin: auto;
-                    margin-top: 5vh;
+                  
+                .card {
+                    // background-color: blue;
+                    width: 30vw;
+                    height: 60vh;
+                    img {
+                      position: relative;
+                      margin: auto;
+                      width: 20em;
+                    }
+                  
+                    .content {
+                      padding: 1em;
+                      text-align: center;
+                        h2 {
+                            @include subtitle($jaune, 1%);
+                        }
+                  
+                        h3 {
+                            // color: #ccc;
+                            // font-size: 0.9rem;
+                            // font-weight: 300;
+                            @include subtitle($rouge, 1%, 1em)
+                        }
+                    }
                 }
+                  
+                .map {
+                    filter: blur(1px);
+                    margin-top: 1em;
+                    & > button {
+                      all: unset;
+                      background: darken($jaune, 10);
+                      box-shadow: 0 0 10px $jaune, 0 0 40px $jaune, 0 0 80px $jaune;
+                      cursor: pointer;
+                      margin: 0 0.5em;
+                      position: relative;
+                      user-select: none;
+                      @include circle(1em);
+                
+                        &.active {
+                            &:after {
+                                background: lighten($jaune, 10);
+                                content: "";
+                                left: 50%;
+                                position: absolute;
+                                transform: translate(-50%, -50%);
+                                top: 50%;
+                                @include circle(0.5em);
+                            }
+                        } 
+                    }
+                } 
             }
         }
     }
 }
-
-// Carousel
-
-.wrapper {
-    display: flex;
-    grid-gap: 1em;
-    overflow: hidden;
-    width: 100%;
-    
-    & > .inner {
-      display: flex;
-      grid-gap: 25em;
-      transition: all 0.5s ease-in-out;
-    }
-}
-  
-.card {
-    & > img {
-      display: flex;
-      width: 17.5em;
-    }
-  
-    & > .content {
-      padding: 1em;
-      text-align: center;
-  
-        & > h1, & > h3 {
-            margin: 0.35em 0;
-        }
-  
-        & > h1 {
-            color: #fff;
-            font-size: 1.25rem;
-            line-height: 1;
-        }
-  
-        & > h3 {
-            color: #ccc;
-            font-size: 0.9rem;
-            font-weight: 300;
-        }
-    }
-}
-  
-.map {
-    margin-top: 1em;
-    & > button {
-      all: unset;
-      background: lighten($jaune, 10);
-      cursor: pointer;
-      margin: 0 0.125em;
-      position: relative;
-      user-select: none;
-      @include circle(1em);
-
-        &.active {
-            &:after {
-                background: $violet;
-                content: "";
-                left: 50%;
-                position: absolute;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                @include circle(0.5em);
-            }
-        } 
-    }
-  }  
 
 ::selection {
     background-color: rgba(255, 152, 241, 0.418);
@@ -463,17 +454,14 @@ img {
 
 
 @media only screen and (min-width: 768px) {
-
     img {
         top: 17%;
     }
-
     h1 {
         font-size: 4em;
     }
-
     h2 {
-        font-size: 3.5em;
+        font-size: 3.1em;
     }
 }
 
@@ -496,22 +484,14 @@ img {
 }
 
 @media all and (min-width:768px) and (min-height:580px) {
-    #start-screen #plane {
+    #plane {
         -webkit-transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1);
         transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1)
-    }
-
-    #start-screen #start-btn {
-        margin: 40px 0 0
-    }
-
-    #start-screen h3 {
-        bottom: 32px
     }
 }
 
 @media all and (min-height:720px) {
-    #start-screen #plane {
+    #plane {
         -webkit-perspective: 360px;
         perspective: 360px
     }
