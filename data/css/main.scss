@@ -2,6 +2,28 @@ $jaune : #F9C80E;
 $rouge : #ff4365;
 $violet : #791E94;
 
+@mixin title($color) {
+    margin: 0;
+    padding: 0;
+    color: $color;
+    font-size: 3.4em;
+    text-shadow: 0px 0px 30px $color;
+}
+
+@mixin subtitle($color) {
+    margin: 0;
+    margin-top: 5%;
+    padding: 0;
+    color: $color;
+    font-size: 2em;
+    text-shadow: 0px 0px 30px $color;
+}
+
+@mixin circle($i) {
+    border-radius: 100%;
+    height: $i;
+    width: $i;
+}
 
 *,
 *:before,
@@ -13,8 +35,16 @@ body {
     margin: 0;
     background-color: #000;
     height: 100vh;
-    font-family: "Road Rage";
     font-size: 16px;
+    overflow: hidden;
+    * {
+        font-family: "Road Rage";
+    }
+    p {
+        font-family: "Metropolis";
+        color: white;
+        font-size: 1.2em;
+    }
 }
 
 img {
@@ -24,7 +54,7 @@ img {
     transition: top 1s;
 }
 
-.wrapper {
+.logo-wrapper {
     display: grid;
     place-items: center;
     position: absolute;
@@ -301,21 +331,13 @@ img {
             position: relative;
             // background-color: #fff;
             h2 {
-                @include title ($jaune);
-                // font-size: 3.4em;
-                // color: $jaune;
-                // text-shadow: 0px 0px 30px $jaune;
-                // padding: 0;
-                // margin: 0;
+                @include title($jaune);
             }
             .theme {
-                h3 {
-                    @include subtitle ($rouge);
-                    // margin: 0;
-                    // padding: 0;
-                    // font-size: 2em;
-                    // color: $rouge;
-                }
+                margin-top: 5%;
+            }
+            h3 {
+                @include subtitle($rouge);
             }
         }
         .right-side {
@@ -323,7 +345,6 @@ img {
             height: 75vh;
             padding: 3%;
             position: relative;
-            
             // background-color: blue;
             &_container {
                 text-align: center;
@@ -345,6 +366,73 @@ img {
     }
 }
 
+// Carousel
+
+.wrapper {
+    display: flex;
+    grid-gap: 1em;
+    overflow: hidden;
+    width: 100%;
+    
+    & > .inner {
+      display: flex;
+      grid-gap: 25em;
+      transition: all 0.5s ease-in-out;
+    }
+}
+  
+.card {
+    & > img {
+      display: flex;
+      width: 17.5em;
+    }
+  
+    & > .content {
+      padding: 1em;
+      text-align: center;
+  
+        & > h1, & > h3 {
+            margin: 0.35em 0;
+        }
+  
+        & > h1 {
+            color: #fff;
+            font-size: 1.25rem;
+            line-height: 1;
+        }
+  
+        & > h3 {
+            color: #ccc;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+    }
+}
+  
+.map {
+    margin-top: 1em;
+    & > button {
+      all: unset;
+      background: lighten($jaune, 10);
+      cursor: pointer;
+      margin: 0 0.125em;
+      position: relative;
+      user-select: none;
+      @include circle(1em);
+
+        &.active {
+            &:after {
+                background: $violet;
+                content: "";
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                @include circle(0.5em);
+            }
+        } 
+    }
+  }  
 
 ::selection {
     background-color: rgba(255, 152, 241, 0.418);
@@ -429,33 +517,17 @@ img {
     }
 }
 
-@mixin title ($color) {
-    margin: 0;
-    padding: 0;
-    color: $color;
-    font-size: 3.4em;
-    text-shadow: 0px 0px 30px $color;
-}
-
-@mixin subtitle ($color) {
-    margin: 0;
-    margin-top: 5%;
-    padding: 0;
-    color: $color;
-    font-size: 2em;
-    text-shadow: 0px 0px 30px $color;
+@font-face {
+    font-family: 'RoadRage';
+    src: url('../font/Road_Rage.woff');
 }
 
 @font-face {
     font-family: 'RoadRage';
-    font-style: normal;
-    font-weight: normal;
-    src: local('RoadRage'), url('./data/font/Road_Rage.woff') format('woff');
+    src: url('../font/Road_Rage.ttf');
 }
 
 @font-face {
-    font-family: 'RoadRage';
-    font-style: normal;
-    font-weight: normal;
-    src: local('RoadRage'), url('./data/font/Road_Rage.ttf') format('ttf');
+    font-family: 'Metropolis-light';
+    src: url('../font/Metropolis-Light.otf');
 }

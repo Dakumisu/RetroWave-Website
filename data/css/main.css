@@ -9,8 +9,18 @@ body {
   margin: 0;
   background-color: #000;
   height: 100vh;
-  font-family: "Road Rage";
   font-size: 16px;
+  overflow: hidden;
+}
+
+body * {
+  font-family: "Road Rage";
+}
+
+body p {
+  font-family: "Metropolis";
+  color: white;
+  font-size: 1.2em;
 }
 
 img {
@@ -21,7 +31,7 @@ img {
   transition: top 1s;
 }
 
-.wrapper {
+.logo-wrapper {
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -341,18 +351,24 @@ img {
 }
 
 .infos .container-popup .left-side h2 {
-  font-size: 3.4em;
-  color: #F9C80E;
-  text-shadow: 0px 0px 30px #F9C80E;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  color: #F9C80E;
+  font-size: 3.4em;
+  text-shadow: 0px 0px 30px #F9C80E;
 }
 
-.infos .container-popup .left-side .theme h3 {
+.infos .container-popup .left-side .theme {
+  margin-top: 5%;
+}
+
+.infos .container-popup .left-side h3 {
   margin: 0;
+  margin-top: 5%;
   padding: 0;
-  font-size: 2em;
   color: #ff4365;
+  font-size: 2em;
+  text-shadow: 0px 0px 30px #ff4365;
 }
 
 .infos .container-popup .right-side {
@@ -376,6 +392,84 @@ img {
   width: 75%;
   margin: auto;
   margin-top: 5vh;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 1em;
+  overflow: hidden;
+  width: 100%;
+}
+
+.wrapper > .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 25em;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.card > img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 17.5em;
+}
+
+.card > .content {
+  padding: 1em;
+  text-align: center;
+}
+
+.card > .content > h1, .card > .content > h3 {
+  margin: 0.35em 0;
+}
+
+.card > .content > h1 {
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.card > .content > h3 {
+  color: #ccc;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.map {
+  margin-top: 1em;
+}
+
+.map > button {
+  all: unset;
+  background: #fad340;
+  cursor: pointer;
+  margin: 0 0.125em;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 100%;
+  height: 1em;
+  width: 1em;
+}
+
+.map > button.active:after {
+  background: #791E94;
+  content: "";
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 100%;
+  height: 0.5em;
+  width: 0.5em;
 }
 
 ::-moz-selection {
@@ -484,15 +578,16 @@ img {
 
 @font-face {
   font-family: 'RoadRage';
-  font-style: normal;
-  font-weight: normal;
-  src: local("RoadRage"), url("./data/font/Road_Rage.woff") format("woff");
+  src: url("../font/Road_Rage.woff");
 }
 
 @font-face {
   font-family: 'RoadRage';
-  font-style: normal;
-  font-weight: normal;
-  src: local("RoadRage"), url("./data/font/Road_Rage.ttf") format("ttf");
+  src: url("../font/Road_Rage.ttf");
+}
+
+@font-face {
+  font-family: 'Metropolis-light';
+  src: url("../font/Metropolis-Light.otf");
 }
 /*# sourceMappingURL=main.css.map */
