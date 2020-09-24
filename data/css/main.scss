@@ -125,8 +125,11 @@ img {
     z-index: 11;
     overflow: hidden;
     transition: 0.2s ease;
+    text-shadow: 0 0 10px $jaune, 0 0 20px $jaune, 0 0 30px $jaune;
     &:hover {
+        text-shadow: 0 0 0px $jaune, 0 0 0px $jaune, 0 0 0px $jaune;
         box-shadow: 0 0 10px $jaune, 0 0 40px $jaune, 0 0 80px $jaune;
+        border: 2px solid $jaune;
         transition-delay: 0.2s;
         background-color: $jaune;
     }

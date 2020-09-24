@@ -99,11 +99,14 @@ img {
   overflow: hidden;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  text-shadow: 0 0 10px #F9C80E, 0 0 20px #F9C80E, 0 0 30px #F9C80E;
 }
 
 .link:hover {
+  text-shadow: 0 0 0px #F9C80E, 0 0 0px #F9C80E, 0 0 0px #F9C80E;
   -webkit-box-shadow: 0 0 10px #F9C80E, 0 0 40px #F9C80E, 0 0 80px #F9C80E;
           box-shadow: 0 0 10px #F9C80E, 0 0 40px #F9C80E, 0 0 80px #F9C80E;
+  border: 2px solid #F9C80E;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
   background-color: #F9C80E;
