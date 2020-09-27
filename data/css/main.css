@@ -3,6 +3,7 @@
 *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: none;
 }
 
 body {
@@ -95,7 +96,7 @@ img {
   text-align: center;
   top: 83%;
   left: 50%;
-  z-index: 11;
+  z-index: 10;
   overflow: hidden;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
@@ -141,6 +142,7 @@ img {
   text-align: center;
   background-color: #000;
   overflow: hidden;
+  pointer-events: none;
 }
 
 #bg #plane-wrapper {
@@ -315,7 +317,6 @@ img {
 }
 
 .infos svg path:hover {
-  cursor: pointer;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-box-shadow: 0 0 10px #F9C80E, 0 0 40px #F9C80E, 0 0 80px #F9C80E;
@@ -459,7 +460,6 @@ img {
   background: #cfa505;
   -webkit-box-shadow: 0 0 10px #F9C80E, 0 0 40px #F9C80E, 0 0 80px #F9C80E;
           box-shadow: 0 0 10px #F9C80E, 0 0 40px #F9C80E, 0 0 80px #F9C80E;
-  cursor: pointer;
   margin: 0 0.5em;
   position: relative;
   -webkit-user-select: none;
@@ -539,8 +539,8 @@ img {
 }
 
 .cursor {
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
   border: 2px solid white;
   border-radius: 50%;
   position: absolute;
@@ -555,7 +555,7 @@ img {
   transition-property: background, transform, -webkit-transform;
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
-  z-index: 15;
+  z-index: 50;
   -webkit-box-shadow: 0 0 10px #F9C80E, 0 0 40px #F9C80E, 0 0 80px #F9C80E;
           box-shadow: 0 0 10px #F9C80E, 0 0 40px #F9C80E, 0 0 80px #F9C80E;
 }
@@ -563,7 +563,8 @@ img {
 .cursor__grow {
   -webkit-transform: scale(2);
           transform: scale(2);
-  background: #F9C80E;
+  -webkit-backdrop-filter: contrast(150%);
+          backdrop-filter: contrast(150%);
 }
 
 @media only screen and (min-width: 768px) {

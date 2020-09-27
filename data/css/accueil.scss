@@ -69,7 +69,7 @@ img {
     text-align: center;
     top: 83%;
     left: 50%;
-    z-index: 11;
+    z-index: 10;
     overflow: hidden;
     transition: 0.2s ease;
     text-shadow: 0 0 10px $jaune, 0 0 20px $jaune, 0 0 30px $jaune;
@@ -106,6 +106,7 @@ img {
     text-align: center;
     background-color: #000;
     overflow: hidden;
+    pointer-events: none;
 
     #plane-wrapper {
         position: absolute;
@@ -255,7 +256,6 @@ img {
             color: $jaune;
             transition: all 0.5s ease;
             &:hover {
-                cursor: pointer;
                 transition: all 0.5s ease;
                 box-shadow: 0 0 10px $jaune, 0 0 40px $jaune, 0 0 80px $jaune;
                 color: lighten($jaune, 20%);
@@ -351,7 +351,6 @@ img {
                       all: unset;
                       background: darken($jaune, 10);
                       box-shadow: 0 0 10px $jaune, 0 0 40px $jaune, 0 0 80px $jaune;
-                      cursor: pointer;
                       margin: 0 0.5em;
                       position: relative;
                       user-select: none;
