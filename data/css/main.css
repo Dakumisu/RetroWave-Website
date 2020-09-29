@@ -24,6 +24,38 @@ body p {
   font-size: 1.2em;
 }
 
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 9;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 20;
+}
+
+.music--container {
+  position: fixed;
+  width: 50px;
+  top: 8vh;
+  z-index: 11;
+}
+
+.music__on, .music__off {
+  position: fixed;
+  right: 2vw;
+  width: 50px;
+  color: #F9C80E;
+  -webkit-filter: drop-shadow(0 0 10px #F9C80E);
+          filter: drop-shadow(0 0 10px #F9C80E);
+}
+
 img {
   position: fixed;
   width: 100%;
@@ -295,12 +327,12 @@ img {
   left: 35px;
 }
 
-.infos #popup {
+.infos .popup {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 
-.infos #popup__close {
+.infos .popup__close {
   left: -15px;
   top: 3.5vh;
 }
@@ -539,8 +571,8 @@ img {
 }
 
 .cursor {
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
   border: 2px solid white;
   border-radius: 50%;
   position: absolute;

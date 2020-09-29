@@ -1,48 +1,34 @@
-$(document).ready(function () {
-  $("#popup__open").click(function () {
-    $(".container-popup").css({ "opacity": "1" });
-    $(".container-popup").css({ "pointer-events": "auto" });
+document.addEventListener("DOMContentLoaded", function() {
+  let musicAudio = document.querySelector(".music--audio");
+  musicAudio.play();
+});
 
-    $("#popup__open").css({ "opacity": "0" });
-    $("#popup__open").css({ "pointer-events": "none" });
-    $("#popup__open").css({ "z-index": "19" });
+window.addEventListener("load", function () {
+  
+  let popupOpen = document.querySelector(".popup__open");
+  let popupClose = document.querySelector(".popup__close");
+  let popupContainer = document.querySelector(".container-popup");
 
-    $("#popup__close").css({ "opacity": "1" });
-    $("#popup__close").css({ "pointer-events": "auto" });
-    $("#popup__close").css({ "z-index": "20" });
+  popupOpen.addEventListener("click", function () {
+    popupContainer.classList.remove("hide");
+    popupContainer.classList.add("show");
+
+    popupOpen.classList.remove("show");
+    popupOpen.classList.add("hide");
+
+    popupClose.classList.remove("hide");
+    popupClose.classList.add("show");
   });
 
-  // $("#popup__open").hover(function () {
-  //     $("#popup__open").css({ "opacity": "0" });
-  //     $("#popup__open").css({ "pointer-events": "none" });
-  //     $("#popup__open").css({ "z-index": "19" });
+  popupClose.addEventListener("click", function () {
+    popupContainer.classList.remove("show");
+    popupContainer.classList.add("hide");
 
-  //     $("#popup__close").css({ "opacity": "1" });
-  //     $("#popup__close").css({ "pointer-events": "auto" });
-  //     $("#popup__close").css({ "z-index": "20" });
-  // },
-  //     function () {
-  //         $("#popup__open").css({ "opacity": "1" });
-  //         $("#popup__open").css({ "pointer-events": "auto" });
-  //         $("#popup__open").css({ "z-index": "20" });
+    popupOpen.classList.remove("hide");
+    popupOpen.classList.add("show");
 
-  //         $("#popup__close").css({ "opacity": "0" });
-  //         $("#popup__close").css({ "pointer-events": "none" });
-  //         $("#popup__close").css({ "z-index": "19" });
-  //     });
-
-  $("#popup__close").click(function () {
-    $(".container-popup").css({ "opacity": "0" });
-    $(".container-popup").css({ "pointer-events": "none" });
-
-    $("#popup__open").css({ "opacity": "1" });
-    $("#popup__open").css({ "pointer-events": "auto" });
-    $("#popup__open").css({ "z-index": "20" });
-
-    $("#popup__close").css({ "opacity": "0" });
-    $("#popup__close").css({ "pointer-events": "none" });
-    $("#popup__close").css({ "z-index": "19" });
-
+    popupClose.classList.remove("show");
+    popupClose.classList.add("hide");
   });
 
   const buttonsWrapper = document.querySelector(".map");
@@ -57,20 +43,23 @@ $(document).ready(function () {
         slides.style.transform = "translateX(-0%)";
         e.target.classList.add("active");
       } else {
-        slides.style.transform = "translateX(-60%)";
+        slides.style.transform = "translateX(-50vw)";
         e.target.classList.add("active");
       }
     }
   });
 
   let mouseCursor = document.querySelector(".cursor");
-  let link = document.querySelectorAll("a, .map button, .infos svg");
+  let link = document.querySelectorAll("a, button, .map button, .infos svg, .music--container svg");
 
   window.addEventListener("mousemove", cursor);
 
   function cursor(e) {
-    mouseCursor.style.top = e.pageY + 'px';
-    mouseCursor.style.left = e.pageX + 'px';
+    var posY = e.pageY;
+    var posX = e.pageX;
+
+    mouseCursor.style.top = posY + 'px';
+    mouseCursor.style.left = posX + 'px';
   }
 
   link.forEach(g => {
@@ -80,5 +69,27 @@ $(document).ready(function () {
     g.addEventListener("mouseleave", () => {
       mouseCursor.classList.remove("cursor__grow");
     });
-  })
+  });
+
+  let musicAudio = document.querySelector(".music--audio");
+  let musicOn = document.querySelector(".music__on");
+  let musicOff = document.querySelector(".music__off");
+
+  musicOn.addEventListener("click", function () {
+    musicAudio.play();
+    musicOn.classList.add("hide");
+    musicOn.classList.remove("show");
+
+    musicOff.classList.add("show");
+    musicOff.classList.remove("hide");
+  });
+
+  musicOff.addEventListener("click", function () {
+    musicAudio.pause();
+    musicOn.classList.remove("hide");
+    musicOn.classList.add("show");
+
+    musicOff.classList.remove("show");
+    musicOff.classList.add("hide");
+  });
 });
