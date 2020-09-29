@@ -17,29 +17,34 @@
     <link rel="icon" href="favicon.png" />
 </head>
 
-<body>
+<body data-barba="wrapper">
+
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
 
     <div class="cursor"></div>
+
+    <div class="loader-container">
+        <svg version="1.1" class="loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+          <path fill="#fff" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+            <animateTransform 
+               attributeName="transform" 
+               attributeType="XML" 
+               type="rotate"
+               dur="1s" 
+               from="0 50 50"
+               to="360 50 50" 
+               repeatCount="indefinite" />
+        </path>
+      </svg>
+    </div>
 
     <audio class="music--audio" src="./data/music/siames-summer-nights.mp3"></audio>
 
     <div class="music--container">
-        <svg version="1.1" class="music__off show" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
-            <g>
-                <path d="M262.8,57.9c-5-2.6-11.1-2.1-15.6,1.3l-116.5,85.5H15c-8.3,0-15,6.7-15,15v192.8c0,8.3,6.7,15,15,15h115.6l116.5,85.5
-			            c2.6,1.9,5.7,2.9,8.9,2.9c2.3,0,4.6-0.5,6.8-1.6c5-2.6,8.2-7.7,8.2-13.4V71.2C271,65.6,267.8,60.4,262.8,57.9z M241,411.2
-                        l-96.6-70.9c-2.6-1.9-5.7-2.9-8.9-2.9H30V174.6h105.5c3.2,0,6.3-1,8.9-2.9l96.6-70.9V411.2z" />
-                <path d="M439.9,57L439.9,57c-3.9-6.7-12.4-9-19.1-5.1l-96.1,55.5c-6.7,3.9-9,12.4-5.1,19.1v0c3.9,6.7,12.4,9,19.1,5.1l96.1-55.5
-	                    C441.5,72.3,443.8,63.7,439.9,57z" />
-                <path d="M439.9,455L439.9,455c-3.9,6.7-12.4,9-19.1,5.1l-96.1-55.5c-6.7-3.9-9-12.4-5.1-19.1v0c3.9-6.7,12.4-9,19.1-5.1l96.1,55.5
-	                    C441.5,439.7,443.8,448.3,439.9,455z" />
-                <path d="M350.2,256L350.2,256c0-7.7,6.3-14,14-14l111,0c7.7,0,14,6.3,14,14l0,0c0,7.7-6.3,14-14,14l-111,0
-	                    C356.5,270,350.2,263.7,350.2,256z" />
-            </g>
-        </svg>
-
-        <svg version="1.1" class="music__on hide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        <svg version="1.1" class="music__on show" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
             <g>
                 <path d="M262.78,57.853c-5.042-2.556-11.091-2.059-15.65,1.284l-116.54,85.462H15c-8.284,0-15,6.716-15,15V352.4
@@ -53,7 +58,20 @@
 			L445.913,256.002z" />
             </g>
         </svg>
-
+        <svg version="1.1" class="music__off hide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
+            <g>
+                <path d="M262.8,57.9c-5-2.6-11.1-2.1-15.6,1.3l-116.5,85.5H15c-8.3,0-15,6.7-15,15v192.8c0,8.3,6.7,15,15,15h115.6l116.5,85.5
+			            c2.6,1.9,5.7,2.9,8.9,2.9c2.3,0,4.6-0.5,6.8-1.6c5-2.6,8.2-7.7,8.2-13.4V71.2C271,65.6,267.8,60.4,262.8,57.9z M241,411.2
+                        l-96.6-70.9c-2.6-1.9-5.7-2.9-8.9-2.9H30V174.6h105.5c3.2,0,6.3-1,8.9-2.9l96.6-70.9V411.2z" />
+                <path d="M439.9,57L439.9,57c-3.9-6.7-12.4-9-19.1-5.1l-96.1,55.5c-6.7,3.9-9,12.4-5.1,19.1v0c3.9,6.7,12.4,9,19.1,5.1l96.1-55.5
+	                    C441.5,72.3,443.8,63.7,439.9,57z" />
+                <path d="M439.9,455L439.9,455c-3.9,6.7-12.4,9-19.1,5.1l-96.1-55.5c-6.7-3.9-9-12.4-5.1-19.1v0c3.9-6.7,12.4-9,19.1-5.1l96.1,55.5
+	                    C441.5,439.7,443.8,448.3,439.9,455z" />
+                <path d="M350.2,256L350.2,256c0-7.7,6.3-14,14-14l111,0c7.7,0,14,6.3,14,14l0,0c0,7.7-6.3,14-14,14l-111,0
+	                    C356.5,270,350.2,263.7,350.2,256z" />
+            </g>
+        </svg>
     </div>
 
     <div class="infos">
@@ -152,7 +170,7 @@
 
     <img src="./data/img/bg.svg" alt="background">
 
-    <div class="link">
+    <div class="link" data-barba="container" data-barba-namespace="home-section">
         <a href="./contenu.html">
             Découvrez la tendance
         </a>
@@ -241,6 +259,15 @@
             </div>
         </div>
     </div>
+
+    <!-- <script src="https://unpkg.com/@barba/core"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script> -->
+
+    <!-- <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+    <script>
+        const swup = new Swup();
+    </script> -->
+
 </body>
 
 </html>

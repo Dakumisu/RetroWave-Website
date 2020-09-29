@@ -1,0 +1,16 @@
+.music {
+    &--container {
+        position: fixed;
+        width: 50px;
+        top: 8vh;
+        z-index: 11;
+    }
+
+    &__on, &__off {
+        position: fixed;
+        right: 2vw;
+        width: 50px;
+        color: $jaune;
+        filter: drop-shadow(0 0 10px $jaune);
+    }
+}
