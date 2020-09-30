@@ -276,13 +276,11 @@ img {
         top: 15vh;
         background: $violet;
         box-shadow: 0px 0px 30px #ce1ed1;
-        z-index: 15;
         .left-side {
             width: 50%;
             height: 75vh;
             padding: 3%;
             position: relative;
-            // background-color: #fff;
             h2 {
                 @include title($jaune);
             }
@@ -319,7 +317,6 @@ img {
                 }
                   
                 .card {
-                    // background-color: blue;
                     width: 30vw;
                     height: 60vh;
                     img {
@@ -336,9 +333,6 @@ img {
                         }
                   
                         h3 {
-                            // color: #ccc;
-                            // font-size: 0.9rem;
-                            // font-weight: 300;
                             @include subtitle($rouge, 1%, 1em)
                         }
                     }
