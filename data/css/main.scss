@@ -16,12 +16,12 @@ body {
     background-color: #000;
     height: 100vh;
     font-size: 16px;
-    overflow: hidden;
+    // overflow: hidden;
     * {
-        font-family: "Road Rage";
+        font-family: "RoadRage";
     }
     p {
-        font-family: "Metropolis";
+        font-family: "Metropolis-light";
         color: white;
         font-size: 1.2em;
     }
@@ -113,14 +113,14 @@ body {
     }
 }
 
-// @font-face {
-//     font-family: 'RoadRage';
-//     src: url('../font/Road_Rage.woff');
-// }
-
 @font-face {
     font-family: 'RoadRage';
     src: url('../font/Road_Rage.ttf');
+}
+
+@font-face {
+    font-family: 'Lazer84';
+    src: url('../font/Lazer84.ttf');
 }
 
 @font-face {
