@@ -1,0 +1,44 @@
+@media only screen and (min-width: 768px) {
+  .bg--mountains {
+    top: 17%;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 3.1em;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  body {
+    background-position: 50% 0%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .bg--mountains {
+    top: 8%;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .bg--mountains {
+    top: -10%;
+  }
+}
+
+@media all and (min-width: 768px) and (min-height: 580px) {
+  #plane {
+    -webkit-transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1);
+    transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1);
+  }
+}
+
+@media all and (min-height: 720px) {
+  #plane {
+    -webkit-perspective: 360px;
+    perspective: 360px;
+  }
+}
+/*# sourceMappingURL=medias.css.map */

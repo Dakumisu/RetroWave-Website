@@ -11,12 +11,16 @@ $violet : #791E94;
     cursor: none;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     margin: 0;
     background-color: #000;
     height: 100vh;
     font-size: 16px;
-    // overflow: hidden;
+    overflow: hidden;
     * {
         font-family: "RoadRage";
     }
@@ -67,63 +71,5 @@ body {
 @import 'cursor';
 @import 'loader';
 @import 'music';
-
-
-@media only screen and (min-width: 768px) {
-    img {
-        top: 17%;
-    }
-    h1 {
-        font-size: 4em;
-    }
-    h2 {
-        font-size: 3.1em;
-    }
-}
-
-@media only screen and (min-width: 950px) {
-    body {
-        background-position: 50% 0%;
-    }
-}
-
-@media only screen and (min-width: 1100px) {
-    img {
-        top: 8%;
-    }
-}
-
-@media only screen and (min-width: 1500px) {
-    img {
-        top: -10%;
-    }
-}
-
-@media all and (min-width:768px) and (min-height:580px) {
-    #plane {
-        -webkit-transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1);
-        transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1)
-    }
-}
-
-@media all and (min-height:720px) {
-    #plane {
-        -webkit-perspective: 360px;
-        perspective: 360px
-    }
-}
-
-@font-face {
-    font-family: 'RoadRage';
-    src: url('../font/Road_Rage.ttf');
-}
-
-@font-face {
-    font-family: 'Lazer84';
-    src: url('../font/Lazer84.ttf');
-}
-
-@font-face {
-    font-family: 'Metropolis-light';
-    src: url('../font/Metropolis-Light.otf');
-}
+@import 'medias';
+@import 'font';

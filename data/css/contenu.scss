@@ -1,61 +1,63 @@
 #vidéo_accueil { 
-    width: 1919px;
-    height: 1079px;
-    left: 0px;
-    top: 0px;
-    background-size: cover;
+    // background-size: cover;
+    img {
+        position: relative;
+        width: 100%;
+        pointer-events: none;
+    }
 }
 
-.séparation1{
-    position: absolute;
-    width: 897px;
-    height: 16px;
-    left: 0px;
-    top: 1066px;
-    z-index: 8;
-    background: #791E94;
-    -webkit-box-shadow: 0px 0px 30px #ce1ed1;
-    box-shadow: 0px 0px 30px #ce1ed1;
-}
+.split_slide{
+    &--1 {
+        position: relative;
+        width: 47%;
+        height: 2vh;
+        left: 0px;
+        float: left;
+        // top: 1066px;
+        z-index: 8;
+        background: $violet;
+        box-shadow: 0px 0px 30px #ce1ed1;
+        transform: translate(0, -20px);
+    }
 
-.flèche_haut{
-    position: absolute;
-    width: 67px;
-    height: 44px;
-    left: 49%;
-    top: 1000px;
-    background: #F9C80E;
-    transform: rotate(-180deg);
-}
+    &--2 {
+        position: relative;
+        width: 47%;
+        height: 2vh;
+        // top: 1066px;
+        right: 0;
+        float: right;
+        z-index: 8;
+        background: $violet;
+        box-shadow: 0px 0px 30px #ce1ed1;
+        transform: translate(0, -20px);
+    }
 
+    &--triangle {
+        height: 11vh;
+        position: relative;
+        margin: auto;
+        color: $jaune;
+        z-index: 20;
+        transform: translate(20%, -60%);
+    }
 
-.séparation2{
-    position: absolute;
-    width: 903px;
-    height: 16px;
-    left: 1023px;
-    top: 1066px;
-    z-index: 8;
-    background: #791E94;
-    -webkit-box-shadow: 0px 0px 30px #ce1ed1;
-    box-shadow: 0px 0px 30px #ce1ed1;
-}
-
-.flèche_haut1{
-    position: absolute;
-    width: 67px;
-    height: 44px;
-    left: 49%;
-    top: 1115px;
-    background: #F9C80E;
-    transform: rotate(-180deg);
-    z-index: 8;
-}
+    // &--triangle__down {
+    //     position: relative;
+    //     width: 67px;
+    //     height: 44px;
+    //     margin: auto;
+    //     background: #F9C80E;
+    //     transform: rotate(-180deg);
+    //     z-index: 8;
+    // }
+}   
 
 #bg1{
     position: absolute;
-    width: 1919px;
-    height: 1080px;
+    // width: 1919px;
+    // height: 1080px;  
     left: 0px;
     top: 1082px;
 }
@@ -64,6 +66,11 @@
 //     position: absolute;
 //     z-index: 1;
 // }
+
+.body--contenu {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 #décor{
     position: absolute;
@@ -188,6 +195,3 @@
     border: 6px solid #FF4365;
     box-shadow: 0px 0px 3px rgba(235, 255, 0, 0.25);
 }
-
-
-

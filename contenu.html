@@ -12,35 +12,34 @@
     <meta name="publisher" content="IUT DE TARBES - MMI" />
     <title>RetroWave's Trend</title>
     <link rel="stylesheet" href="./data/css/main.css" type="text/css" />
-    <script type="text/javascript" src="./data/js/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="./data/js/main.js"></script>
+    <script src="./data/js/jquery-3.5.1.min.js"></script>
+    <!-- <script src="./data/js/main.js"></script> -->
+    <script src="./data/js/cursor.js"></script>
+    <script src="./data/js/loader.js"></script>
+    <script src="./data/js/music.js"></script>
     <link rel="icon" href="favicon.png" />
 </head>
 
-<body>
+<body class="body--contenu">
 
     <div class="cursor"></div>
 
     <div class="loader-container">
-        <svg version="1.1" class="loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-          <path fill="#fff" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
-            <animateTransform 
-               attributeName="transform" 
-               attributeType="XML" 
-               type="rotate"
-               dur="1s" 
-               from="0 50 50"
-               to="360 50 50" 
-               repeatCount="indefinite" />
-        </path>
-      </svg>
+        <svg version="1.1" class="loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+            <path fill="#fff"
+                d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50"
+                    to="360 50 50" repeatCount="indefinite" />
+            </path>
+        </svg>
     </div>
 
     <audio class="music--audio" src="./data/music/siames-summer-nights.mp3"></audio>
     <div class="music--container">
-        <svg version="1.1" class="music__on show" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
+        <svg version="1.1" class="music__on show" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+            style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
             <g>
                 <path d="M262.78,57.853c-5.042-2.556-11.091-2.059-15.65,1.284l-116.54,85.462H15c-8.284,0-15,6.716-15,15V352.4
 			c0,8.284,6.716,15,15,15h115.59l116.54,85.462c2.622,1.924,5.738,2.904,8.872,2.904c2.313,0,4.637-0.535,6.778-1.62
@@ -53,8 +52,9 @@
 			L445.913,256.002z" />
             </g>
         </svg>
-        <svg version="1.1" class="music__off hide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
+        <svg version="1.1" class="music__off hide" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+            style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
             <g>
                 <path d="M262.8,57.9c-5-2.6-11.1-2.1-15.6,1.3l-116.5,85.5H15c-8.3,0-15,6.7-15,15v192.8c0,8.3,6.7,15,15,15h115.6l116.5,85.5
 			            c2.6,1.9,5.7,2.9,8.9,2.9c2.3,0,4.6-0.5,6.8-1.6c5-2.6,8.2-7.7,8.2-13.4V71.2C271,65.6,267.8,60.4,262.8,57.9z M241,411.2
@@ -69,11 +69,23 @@
         </svg>
     </div>
 
-    
+
     <section class="container">
         <section class="container--slide1">
-
+            <div id="vidéo_accueil">
+                <img src="./data/img/vw.gif" alt="toto">
+            </div>
         </section>
+
+        <div class="split_slide--1"></div>
+
+        <svg class="split_slide--triangle" viewBox="0 0 67 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33.5 83L4.48815 50L62.5119 50L33.5 83Z" fill="currentColor"/>
+            <path d="M33.5 44L4.48815 11L62.5119 11L33.5 44Z" fill="currentColor"/>
+        </svg>
+
+        <div class="split_slide--2"></div>
+
         <section class="container--slide2">
 
         </section>
@@ -86,20 +98,11 @@
     </section>
 
 
-    <div id="vidéo_accueil">
-        <img src="./data/img/vw.gif" alt="toto">
-    </div>
 
-    <svg class="séparation1" width="897" height="16" viewBox="0 0 897 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="897" height="16" fill="#791E94"/>
-    </svg>
+    <!-- 
     
-    <img  class="flèche_haut" src="ressources/triangle_jaune.svg" alt="toto">
+    
 
-
-    <img class="séparation2" src="ressources/rectangle_violet.svg" alt="toto">
-
-    <img class="flèche_haut1" src="ressources/triangle_jaune.svg" alt="toto">
 
     <h1> This is Retro Wave</h1>
 
@@ -140,7 +143,7 @@
     <p id="text3">Ob haec et huius modi multa, quae cernebantur in paucis, omnibus timeri sunt coepta. Praetextatus ex urbi
         praefecto et ex vicario Venustus et ex consulari Minervius oraturi, ne delictis supplicia sint grandiora, neve
         senator quisquam inusitato et inlicito more tormentis exponeretur</p>
-
+ -->
 
 
 </body>

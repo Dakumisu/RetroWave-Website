@@ -7,11 +7,16 @@
   cursor: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   margin: 0;
   background-color: #000;
   height: 100vh;
   font-size: 16px;
+  overflow: hidden;
 }
 
 body * {
@@ -40,7 +45,7 @@ body p {
   z-index: 20;
 }
 
-img {
+.bg--mountains {
   position: fixed;
   width: 100%;
   top: 30%;
@@ -553,67 +558,59 @@ img {
   }
 }
 
-#vidéo_accueil {
-  width: 1919px;
-  height: 1079px;
-  left: 0px;
-  top: 0px;
-  background-size: cover;
+#vidéo_accueil img {
+  position: relative;
+  width: 100%;
+  pointer-events: none;
 }
 
-.séparation1 {
-  position: absolute;
-  width: 897px;
-  height: 16px;
+.split_slide--1 {
+  position: relative;
+  width: 47%;
+  height: 2vh;
   left: 0px;
-  top: 1066px;
+  float: left;
   z-index: 8;
   background: #791E94;
   -webkit-box-shadow: 0px 0px 30px #ce1ed1;
-  box-shadow: 0px 0px 30px #ce1ed1;
+          box-shadow: 0px 0px 30px #ce1ed1;
+  -webkit-transform: translate(0, -20px);
+          transform: translate(0, -20px);
 }
 
-.flèche_haut {
-  position: absolute;
-  width: 67px;
-  height: 44px;
-  left: 49%;
-  top: 1000px;
-  background: #F9C80E;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
-.séparation2 {
-  position: absolute;
-  width: 903px;
-  height: 16px;
-  left: 1023px;
-  top: 1066px;
+.split_slide--2 {
+  position: relative;
+  width: 47%;
+  height: 2vh;
+  right: 0;
+  float: right;
   z-index: 8;
   background: #791E94;
   -webkit-box-shadow: 0px 0px 30px #ce1ed1;
-  box-shadow: 0px 0px 30px #ce1ed1;
+          box-shadow: 0px 0px 30px #ce1ed1;
+  -webkit-transform: translate(0, -20px);
+          transform: translate(0, -20px);
 }
 
-.flèche_haut1 {
-  position: absolute;
-  width: 67px;
-  height: 44px;
-  left: 49%;
-  top: 1115px;
-  background: #F9C80E;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-  z-index: 8;
+.split_slide--triangle {
+  height: 11vh;
+  position: relative;
+  margin: auto;
+  color: #F9C80E;
+  z-index: 20;
+  -webkit-transform: translate(20%, -60%);
+          transform: translate(20%, -60%);
 }
 
 #bg1 {
   position: absolute;
-  width: 1919px;
-  height: 1080px;
   left: 0px;
   top: 1082px;
+}
+
+.body--contenu {
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #décor {
@@ -818,7 +815,7 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-  img {
+  .bg--mountains {
     top: 17%;
   }
   h1 {
@@ -836,13 +833,13 @@ img {
 }
 
 @media only screen and (min-width: 1100px) {
-  img {
+  .bg--mountains {
     top: 8%;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  img {
+  .bg--mountains {
     top: -10%;
   }
 }
