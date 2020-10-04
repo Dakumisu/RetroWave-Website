@@ -310,24 +310,25 @@
                     overflow: hidden;
                     width: 100%;
                     & > .inner {
-                      display: flex;
-                      grid-gap: 25em;
-                      transition: all 0.5s ease-in-out;
+                        display: flex;
+                        grid-gap: 25em;
+                        transition: all 0.5s ease-in-out;
                     }
                 }
                   
                 .card {
+                    overflow-y: auto;
                     width: 30vw;
                     height: 60vh;
                     img {
-                      position: relative;
-                      margin: auto;
-                      width: 20em;
+                        position: relative;
+                        margin: auto;
+                        width: 20em;
                     }
                   
                     .content {
-                      padding: 1em;
-                      text-align: center;
+                        padding: 1em;
+                        text-align: center;
                         h2 {
                             @include subtitle($jaune, 1%);
                         }
@@ -342,13 +343,13 @@
                     filter: blur(1px);
                     margin-top: 1em;
                     & > button {
-                      all: unset;
-                      background: darken($jaune, 10);
-                      box-shadow: 0 0 10px $jaune, 0 0 40px $jaune, 0 0 80px $jaune;
-                      margin: 0 0.5em;
-                      position: relative;
-                      user-select: none;
-                      @include circle(1em);
+                        all: unset;
+                        background: darken($jaune, 10);
+                        box-shadow: 0 0 10px $jaune, 0 0 40px $jaune, 0 0 80px $jaune;
+                        margin: 0 0.5em;
+                        position: relative;
+                        user-select: none;
+                        @include circle(1em);
                 
                         &.active {
                             &:after {

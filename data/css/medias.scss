@@ -28,16 +28,70 @@
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    .container-popup {
+        display: block !important;
+        overflow-y: auto;
+        justify-content: center !important;
+        top: 20vh !important;
+    }
+    .left-side, .right-side {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .left-side {
+        padding: 5% !important;
+    }
+    .card {
+        width: 70vw !important;
+        height: unset !important;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .card {
+        width: 65vw !important;
+        height: unset !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .left-side {
+        .titre {
+            h2 {
+                font-size: 2em !important;
+            }
+        }
+        .theme, .roles {
+            h3 {
+                font-size: 1.5em !important;
+            }
+        }
+    }
+    .card {
+        img {
+            width: 15em !important;
+        }
+        .content {
+            h2 {
+                font-size: 1.5em !important;
+            }
+      
+            h3 {
+                font-size: 0.7em !important;
+            }
+        }
+    }
+}
+
 @media all and (min-width:768px) and (min-height:580px) {
     #plane {
-        -webkit-transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1);
         transform: translate3d(-50%, -50%, 0) scale3d(3, 3.6, 1)
     }
 }
 
 @media all and (min-height:720px) {
     #plane {
-        -webkit-perspective: 360px;
         perspective: 360px
     }
 }

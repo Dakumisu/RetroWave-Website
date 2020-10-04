@@ -6,11 +6,8 @@ window.addEventListener("load", function () {
     window.addEventListener("mousemove", cursor);
 
     function cursor(e) {
-        var posY = e.pageY;
-        var posX = e.pageX;
-
-        mouseCursor.style.top = posY + 'px';
-        mouseCursor.style.left = posX + 'px';
+        mouseCursor.style.top = e.pageY + 'px';
+        mouseCursor.style.left = e.pageX + 'px';
     }
 
     link.forEach(g => {

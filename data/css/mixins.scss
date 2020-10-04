@@ -1,8 +1,8 @@
-@mixin title($color) {
+@mixin title($color, $fs:3.4em) {
     margin: 0;
     padding: 0;
     color: $color;
-    font-size: 3.4em;
+    font-size: $fs;
     text-shadow: 0px 0px 30px $color;
     text-align: center;
     @media only screen and (min-width: 80vw) {
