@@ -49,9 +49,11 @@ window.addEventListener("load", function () {
         } else if (window.matchMedia("(min-width : 1050px)").matches) {
             var translateSlide = -68;
         } else if (window.matchMedia("(min-width : 1000px)").matches) {
-            var translateSlide = -114;
+            var translateSlide = -70;
+        } else if (window.matchMedia("(min-width : 800px)").matches) {
+            var translateSlide = -110;
         } else if (window.matchMedia("(min-width : 740px)").matches) {
-            var translateSlide = -118;
+            var translateSlide = -122;
         } else if (window.matchMedia("(min-width : 650px)").matches) {
             var translateSlide = -125;
         } else if (window.matchMedia("(min-width : 600px)").matches) {
@@ -60,8 +62,12 @@ window.addEventListener("load", function () {
             var translateSlide = -137;
         } else if (window.matchMedia("(min-width : 500px)").matches) {
             var translateSlide = -144;
+        } else if (window.matchMedia("(min-width : 450px)").matches) {
+            var translateSlide = -148;
+        } else if (window.matchMedia("(min-width : 400px)").matches) {
+            var translateSlide = -159;
         } else if (window.matchMedia("(max-width : 375px)").matches) {
-            var translateSlide = -174;
+            var translateSlide = -179;
         }
 
         if (e.target.nodeName === "BUTTON") {
