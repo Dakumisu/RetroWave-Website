@@ -565,6 +565,12 @@ body p {
   pointer-events: none;
 }
 
+#background1 img{
+  position: relative;
+  width: 100%;
+  pointer-events: none;
+}
+
 .split_slide--1 {
   position: relative;
   width: 43%;
@@ -1008,3 +1014,8 @@ body p {
   src: url("../font/Metropolis-Light.otf");
 }
 /*# sourceMappingURL=main.css.map */
+
+#filtre{
+  background-color: black;
+  opacity: 0.5;
+}
