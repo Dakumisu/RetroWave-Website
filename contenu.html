@@ -13,7 +13,6 @@
     <title>RetroWave's Trend</title>
     <link rel="stylesheet" href="./data/css/main.css" type="text/css" />
     <script src="./data/js/jquery-3.5.1.min.js"></script>
-    <!-- <script src="./data/js/main.js"></script> -->
     <script src="./data/js/cursor.js"></script>
     <script src="./data/js/loader.js"></script>
     <script src="./data/js/music.js"></script>
@@ -26,14 +25,6 @@
 
     <div class="loader-container">
         <div class="loader"></div>
-        <!-- <svg version="1.1" class="loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-            <path fill="#fff"
-                d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
-                <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50"
-                    to="360 50 50" repeatCount="indefinite" />
-            </path>
-        </svg> -->
     </div>
 
     <audio class="music--audio" src="./data/music/siames-summer-nights.mp3"></audio>
@@ -72,57 +63,60 @@
 
 
     <section class="container">
-        <section class="container--slide1">
-
+        <section class="container--slide_1">
             <div id="vidéo_accueil">
-                <img src="./data/img/vw.gif" alt="toto">
+                <img src="./data/img/vw.gif" alt="image de fond">
             </div>
         </section>
 
-        <div class="split_slide--1"></div>
-        <svg class="split_slide--triangle" viewBox="0 0 67 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M33.5 83L4.48815 50L62.5119 50L33.5 83Z" fill="currentColor" />
-            <path d="M33.5 44L4.48815 11L62.5119 11L33.5 44Z" fill="currentColor" />
-        </svg>
-        <div class="split_slide--2"></div>
 
-        <section class="container--slide2">
-            <h5 style="color:white; position: absolute; justify-content: center; font-size: 200%;">This is RetroWave
-            </h5>
-            <div id="background1">
+        <div class="split_slide split_slide--trait split_slide--trait_1"></div>
+        <svg class="split_slide--triangle split_slide--triangle_1" viewBox="0 0 67 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33.5 83L4.48815 50L62.5119 50L33.5 83Z" />
+            <path d="M33.5 44L4.48815 11L62.5119 11L33.5 44Z" />
+        </svg>
+        <div class="split_slide split_slide--trait split_slide--trait_2"></div>
+
+
+        <section class="container--slide container--slide_2">
+            <h5>This is RetroWave</h5>
+            <div class="background">
                 <div id="filtre">
-                    <img src="./data/img/retrowave_bg.png" alt="tata">
+                    <img src="./data/img/retrowave_bg.png" alt="image de fond">
                 </div>
             </div>
         </section>
 
-        <div class="split_slide--1"></div>
-        <svg class="split_slide--triangle" viewBox="0 0 67 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M33.5 83L4.48815 50L62.5119 50L33.5 83Z" fill="currentColor" />
-            <path d="M33.5 44L4.48815 11L62.5119 11L33.5 44Z" fill="currentColor" />
+
+        <div class="split_slide split_slide--trait split_slide--trait_1"></div>
+        <svg class="split_slide--triangle split_slide--triangle_2" viewBox="0 0 67 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33.5 83L4.48815 50L62.5119 50L33.5 83Z" />
+            <path d="M33.5 44L4.48815 11L62.5119 11L33.5 44Z" />
         </svg>
-        <div class="split_slide--2"></div>
+        <div class="split_slide split_slide--trait split_slide--trait_2"></div>
 
 
-        <section class="container--slide3">
-            <div id="background1">
+        <section class="container--slide container--slide_3">
+            <div class="background">
                 <div id="filtre">
-                    <img src="./data/img/retrowavecar_bg.png" alt="tata">
+                    <img src="./data/img/retrowavecar_bg.png" alt="image de fond">
                 </div>
             </div>
 
         </section>
 
-        <div class="split_slide--1"></div>
-        <svg class="split_slide--triangle" viewBox="0 0 67 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M33.5 83L4.48815 50L62.5119 50L33.5 83Z" fill="currentColor" />
-            <path d="M33.5 44L4.48815 11L62.5119 11L33.5 44Z" fill="currentColor" />
+        <div class="split_slide split_slide--trait split_slide--trait_1"></div>
+        <svg class="split_slide--triangle split_slide--triangle_3" viewBox="0 0 67 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33.5 83L4.48815 50L62.5119 50L33.5 83Z" />
+            <path d="M33.5 44L4.48815 11L62.5119 11L33.5 44Z" />
         </svg>
-        <div class="split_slide--2"></div>
+        <div class="split_slide split_slide--trait split_slide--trait_2"></div>
+
+
         <section class="container--footer">
             <form style="justify-content: center; text-align: center; width: 100%;" action="/ma-page-de-traitement" method="post">
                 <div>
-                    <label for="name" style="color: white; ;">Nom :</label>
+                    <label for="name" style="color: white; ">Nom :</label>
                     <input style="width:30%; background-color: black; margin: 1%; border-color: purple;border: none; box-shadow: 0px 0px 30px #ce1ed1;"
                         type="text" id="name" name="user_name">
                 </div>
