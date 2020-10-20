@@ -104,7 +104,6 @@
 input[type="submit"] {
   border: none;
   padding: 7px 35px;
-  cursor: pointer;
   outline: none;
   background: purple;
   color: white;

@@ -19,7 +19,7 @@
                 // font-size: 4em;
                 z-index: 1;
                 top: 10vh;
-                @include subtitle($jaune, 5%, 4em);
+                @include subtitle($jaune, 5%, 4vw);
             }
 
             .content_texte {

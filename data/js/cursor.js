@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
 
     let mouseCursor = document.querySelector(".cursor");
-    let link = document.querySelectorAll("a, button, .map button, .infos svg, .music--container svg");
+    let link = document.querySelectorAll("a, button, .map button, .infos svg, .music--container svg, input, textarea");
 
     window.addEventListener("mousemove", cursor);
 
