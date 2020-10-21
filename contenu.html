@@ -155,84 +155,80 @@
 
 
         <section class="container--slide container--footer">
-            <h2>Nous contacter</h2>
-            <form action="" method="POST">
-                <div class="form1">
-                    <div class="col">
-                        <div class="inputbox">
-                            <input type="text" name="" required="required">
-                            <span class="text">Nom</span>
-                            <span class="line"></span>
+            <div class="container--footer_form">
+
+                <h2>Nous contacter</h2>
+                <form action="" method="POST">
+                    <div class="form1">
+                        <div class="col">
+                            <div class="inputbox">
+                                <input type="text" name="" required="required">
+                                <span class="text">Nom</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="inputbox">
+                                <input type="email" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}" name="mail" required="required">
+                                <span class="text">E-mail</span>
+                                <span class="line"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="inputbox">
-                            <input type="text" name="" required="required">
-                            <span class="text">E-mail</span>
-                            <span class="line"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="form1">
-                    <!-- <div class="col">
+                    <div class="form1">
+                        <!-- <div class="col">
                             <div class="inputbox">
                                 <input type="text" name="" required="required">
                                 <span class="text">E-mail</span>
                                 <span class="line"></span>
                             </div>
                         </div> -->
-                    <div class="col">
-                        <div class="inputbox">
-                            <input type="text" name="" required="required">
-                            <span class="text">Objet</span>
-                            <span class="line"></span>
+                        <div class="col">
+                            <div class="inputbox">
+                                <input type="text" name="objet" required="required">
+                                <span class="text">Objet</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+
+                        <!-- </div>
+                    <div class="form1"> -->
+                        <div class="col">
+                            <div class="inputbox textarea">
+                                <textarea rows="8" name="msg" placeholder=""></textarea>
+                                <span class="text">Message</span>
+                                <span class="line"></span>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-                <div class="form1">
-                    <div class="col">
-                        <div class="inputbox textarea">
-                            <textarea rows="8" name="msg" placeholder=""></textarea>
-                            <span class="text">Message</span>
-                            <span class="line"></span>
+                    <div class="form1">
+                        <div class="col col__button">
+                            <!-- <input type="submit" value="Envoyer"> -->
+                            <button name="send" class="text">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Submit
+                            </button>
                         </div>
                     </div>
-                </div>
-                <div class="form1">
-                    <div class="col">
-                        <input type="submit" value="Envoyer">
-                    </div>
-                </div>
-            </form>
-
-            <div class="login-box">
-                <h2>Nous contacter</h2>
-                <form action="" method="POST">
-                    <div class="user-box">
-                        <input type="text" name="" required="">
-                        <label>Nom</label>
-                    </div>
-                    <div class="user-box">
-                        <input type="email" name="" required="">
-                        <label>E-mail</label>
-                    </div>
-                    <div class="user-box">
-                        <input type="text" name="" required="">
-                        <label>Objet</label>
-                    </div>
-                    <div class="user-box">
-                        <input type="text" name="" required="">
-                        <label>Message</label>
-                    </div>
-                    <a href="#">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Submit
-                    </a>
                 </form>
+                
+                <?php
+            if (isset($_POST['send'])) {
+                $destinataire = "dakumisu.psd@gmail.com";
+                $objet = "Objet : " . $_POST['objet'];
+                $mail = "Provenant de : " . $_POST['mail'];
+                $msg = $_POST['msg'];
+                if (isset($msg) && isset($objet) && isset($mail) && $msg != '' && $objet != '' && $mail != '') {
+                    mail($destinataire, $objet, $msg, $mail);
+                    echo '<p>Votre message a bien été envoyé !</p>';
+                } else {
+                    echo "<p>Votre message n'a pas pu être envoyé, réessayez !</p>";
+                }
+            }
+            ?>
             </div>
             <!-- <form style="justify-content: center; text-align: center; width: 100%;" action="/ma-page-de-traitement"
                 method="post">
