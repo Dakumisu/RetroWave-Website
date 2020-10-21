@@ -334,7 +334,7 @@
                         }
                   
                         h3 {
-                            @include subtitle($rouge, 1%, 1em)
+                            @include subtitle($rouge, 1%, 1em);
                         }
                     }
                 }
