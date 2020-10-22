@@ -17,6 +17,7 @@ body {
   height: 100vh;
   font-size: 16px;
   overflow: hidden;
+  color: white;
 }
 
 body * {
@@ -390,6 +391,15 @@ body p {
 
 .infos .container-popup .left-side .theme {
   margin-top: 5%;
+}
+
+.infos .container-popup .left-side .roles ul {
+  padding: 0;
+}
+
+.infos .container-popup .left-side .roles ul li {
+  left: 40px;
+  position: relative;
 }
 
 .infos .container-popup .left-side h3 {
@@ -905,11 +915,8 @@ body p {
 .container--footer {
   width: 80%;
   padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   margin: auto;
-  justify-items: center;
 }
 
 .container--footer h2 {
@@ -1369,6 +1376,12 @@ body p {
 @media only screen and (min-width: 950px) {
   body {
     background-position: 50% 0%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cursor {
+    display: none;
   }
 }
 

@@ -287,6 +287,19 @@
             .theme {
                 margin-top: 5%;
             }
+            .roles {
+                ul {
+                    padding: 0;
+                    li {
+                        left: 40px;
+                        position: relative;
+                        // padding: 0 0 0 40px;
+                        // &::marker {
+                        //     padding: 0 0 0 40px;
+                        // }
+                    }
+                }
+            }
             h3 {
                 @include subtitle($rouge, 5%);
             }
