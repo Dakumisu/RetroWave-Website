@@ -104,7 +104,7 @@
         <section class="container-popup hide">
             <div class="left-side">
                 <div class="titre">
-                    <h2>RetroWave's Trending</h2>
+                    <!--<h2>RetroWave's Trending</h2>-->
                 </div>
                 <div class="theme">
                     <h3>Le projet</h3>
@@ -147,6 +147,7 @@
                         </tr>
                     </table>
                 </div>
+                <!-- <button style="margin-left: 30%; margin-top: 10%;">Télécharger la maquette</button> -->
             </div>
             <div class="right-side">
                 <div class="right-side_container">

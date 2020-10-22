@@ -44,6 +44,11 @@
 			L445.913,256.002z" />
             </g>
         </svg>
+
+        <div class="lien">
+        <a href="index.html" target="_blank" ><input type="button" value="Accueil"></a>
+        </div>
+
         <svg version="1.1" class="music__off hide" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
             style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
@@ -164,6 +169,14 @@
 
 
         <section class="container--slide container--footer">
+            <h2 style="font-size: 3vh;">Nous contacter</h2>
+            <form action="" method="POST">
+                <div class="form1">
+                    <div class="col">
+                        <div class="inputbox">
+                            <input type="text" name="" required="required">
+                            <span class="text">Nom</span>
+                            <span class="line"></span>
             <div class="container--footer_form">
 
                 <h2>Nous contacter</h2>
@@ -201,6 +214,32 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="form1">
+                    <div class="col">
+                        <input type="submit" value="Envoyer">
+                    </div>
+                </div>
+            </form>
+
+            <div class="login-box">
+                <h2 style="font-size: 2vh;">Nous contacter</h2>
+                <form action="" method="POST">
+                    <div class="user-box">
+                        <input type="text" name="" required="">
+                        <label>Nom</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="email" name="" required="">
+                        <label>E-mail</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" name="" required="">
+                        <label>Objet</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" name="" required="">
+                        <label>Message</label>
                     <div class="form1">
                         <div class="col col__button">
                             <button name="send" class="text">
