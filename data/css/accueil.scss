@@ -299,6 +299,7 @@
             h3 {
                 @include subtitle($rouge, 5%);
                 font-family: Lazer84;
+                letter-spacing: 2px;
             }
         }
         .right-side {

@@ -63,11 +63,11 @@ window.addEventListener("load", function () {
         } else if (window.matchMedia("(min-width : 500px)").matches) {
             var translateSlide = -144;
         } else if (window.matchMedia("(min-width : 450px)").matches) {
-            var translateSlide = -148;
+            var translateSlide = -152;
         } else if (window.matchMedia("(min-width : 400px)").matches) {
-            var translateSlide = -159;
+            var translateSlide = -165;
         } else if (window.matchMedia("(max-width : 375px)").matches) {
-            var translateSlide = -179;
+            var translateSlide = -175;
         }
 
         if (e.target.nodeName === "BUTTON") {

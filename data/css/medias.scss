@@ -24,7 +24,7 @@
     .container--slide {
         &_2 {
            .content_texte {
-            top: 30vh !important;
+            top: 30vh;
             } 
         }
         &_3 {
@@ -41,8 +41,15 @@
     }
 
     .form1 {
-        button {
+        input[type="text"], textarea {
             font-size: 1.5vw !important;
+        }
+        span {
+            font-size: 2vw !important;
+        }
+        button {
+            width: 30vw !important;
+            font-size: 2vw !important;
         }
     }
 }
@@ -88,7 +95,7 @@
     .container--slide {
         &_2 {
            .content_texte {
-            top: 25vh !important;
+            top: 25vh;
             } 
         }
         &_3 {
@@ -105,7 +112,106 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 640px) {
+    .container--slide {
+        &_2 {
+            h5 {
+                top: 4vh;
+            }
+           .content_texte {
+            top: 18vh;
+            } 
+        }
+        &_3 {
+            .vroum {
+                top: 10vh;
+            }
+            .content_texte {
+                top: 15vh;
+                .text-3 {
+                    top: 5vh;
+                }
+            }
+        }
+    }
+
+    .form1 {
+        input[type="text"], textarea {
+            font-size: 2.5vw !important;
+        }
+        span {
+            font-size: 3vw !important;
+        }
+        button {
+            width: 40vw !important;
+            font-size: 3vw !important;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .container--slide {
+        &_2 {
+           .content_texte {
+            top: 16vh;
+            } 
+        }
+        &_3 {
+            .vroum {
+                top: 8vh;
+            }
+            .content_texte {
+                top: 15vh;
+                .text-3 {
+                    top: 2vh;
+                }
+            }
+        }
+    }
+
+    .container--footer_form {
+        h2 {
+            font-size: 7.5vw;
+        }
+    }
+
+    .form1 {
+        input[type="text"], textarea {
+            font-size: 2.5vw !important;
+        }
+        span {
+            font-size: 3vw !important;
+        }
+        button {
+            width: 60vw !important;
+            font-size: 4vw !important;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container--slide {
+        &_2 {
+           .content_texte {
+            top: 14vh;
+            } 
+        }
+        &_3 {
+            .vroum {
+                top: 6vh;
+            }
+            .content_texte {
+                top: 14vh;
+                .text-3 {
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
     .left-side {
         .titre {
             h2 {
@@ -130,6 +236,33 @@
             h3 {
                 font-size: 0.7em !important;
             }
+        }
+    }
+
+    .container--slide {
+        &_2 {
+           .content_texte {
+            top: 12vh;
+            } 
+        }
+        &_3 {
+            .vroum {
+                top: 6vh;
+            }
+            .content_texte {
+                top: 12.5vh;
+                .text-3 {
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    .container--footer_form {
+        top: -15vh;
+        h2 {
+            font-size: 7vw;
+            top: 0;
         }
     }
 }
