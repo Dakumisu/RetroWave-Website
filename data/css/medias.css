@@ -14,6 +14,9 @@
   body {
     background-position: 50% 0%;
   }
+  .link-contenu {
+    top: 10vh;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -82,6 +85,9 @@
   .card {
     width: 65vw !important;
     height: unset !important;
+  }
+  .link-contenu {
+    top: 8vh;
   }
   .container--slide_2 .content_texte {
     top: 25vh;
@@ -154,6 +160,9 @@
 }
 
 @media screen and (max-width: 450px) {
+  .link-contenu {
+    top: 6vh;
+  }
   .container--slide_2 .content_texte {
     top: 14vh;
   }
