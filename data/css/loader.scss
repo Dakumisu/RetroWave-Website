@@ -47,22 +47,4 @@
             filter: blur(30px);
         }
     }
-//     .loader {
-//         position: relative;
-//         z-index: 25;
-//         width: 10vw;
-//         margin: auto;
-//         filter: drop-shadow(0 0 10px $rouge);
-//     }
-}
-
-@keyframes onload {
-    0% {
-        transform: rotate(0deg);
-        filter: hue-rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
 }

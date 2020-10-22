@@ -62,7 +62,7 @@
     </div>
 
     <div class="link link-contenu">
-        <a href="./index.html">
+        <a href="./index.php">
             <span></span>
             <span></span>
             <span></span>
@@ -186,13 +186,6 @@
                         </div>
                     </div>
                     <div class="form1">
-                        <!-- <div class="col">
-                            <div class="inputbox">
-                                <input type="text" name="" required="required">
-                                <span class="text">E-mail</span>
-                                <span class="line"></span>
-                            </div>
-                        </div> -->
                         <div class="col">
                             <div class="inputbox">
                                 <input type="text" name="objet" required="required">
@@ -200,9 +193,6 @@
                                 <span class="line"></span>
                             </div>
                         </div>
-
-                        <!-- </div>
-                    <div class="form1"> -->
                         <div class="col">
                             <div class="inputbox textarea">
                                 <textarea rows="8" name="msg" placeholder=""></textarea>
@@ -213,7 +203,6 @@
                     </div>
                     <div class="form1">
                         <div class="col col__button">
-                            <!-- <input type="submit" value="Envoyer"> -->
                             <button name="send" class="text">
                                 <span></span>
                                 <span></span>
@@ -225,7 +214,7 @@
                     </div>
                 </form>
 
-                <!-- <?php
+                <?php
             if (isset($_POST['send'])) {
                 $destinataire = "dakumisu.psd@gmail.com";
                 $objet = "Objet : " . $_POST['objet'];
@@ -238,32 +227,8 @@
                     echo "<p>Votre message n'a pas pu être envoyé, réessayez !</p>";
                 }
             }
-            ?> -->
+            ?>
             </div>
-            <!-- <form style="justify-content: center; text-align: center; width: 100%;" action="/ma-page-de-traitement"
-                method="post">
-                <div>
-                    <label for="name" style="color: white; ">Nom :</label>
-                    <input
-                        style="width:30%; background-color: black; margin: 1%; border-color: purple;border: none; box-shadow: 0px 0px 30px #ce1ed1;"
-                        type="text" id="name" name="user_name">
-                </div>
-                <div>
-                    <label for="mail" style="color: white">e-mail :</label>
-                    <input
-                        style="width:30%; background-color: black; margin: 1%; border-color: purple; border: none; box-shadow: 0px 0px 30px #ce1ed1;"
-                        type="email" id="mail" name="user_mail">
-                </div>
-                <div>
-                    <label for="msg" style="color: white;">Message :</label>
-                    <textarea
-                        style="width:30%; background-color: black; margin: 1%; border-color: purple; border: none; box-shadow: 0px 0px 30px #ce1ed1;"
-                        id="msg" name="user_message"></textarea>
-                    <button>Send</button>
-                    <button>Delete</button>
-
-                </div>
-            </form> -->
         </section>
     </section>
 

@@ -50,9 +50,7 @@
 
     <audio class="music--audio" src="./data/music/siames-summer-nights.mp3"></audio>
     <div class="music--container">
-        <svg version="1.1" class="music__on show" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-            style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
+        <svg version="1.1" class="music__on show" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
             <g>
                 <path d="M262.78,57.853c-5.042-2.556-11.091-2.059-15.65,1.284l-116.54,85.462H15c-8.284,0-15,6.716-15,15V352.4
 			c0,8.284,6.716,15,15,15h115.59l116.54,85.462c2.622,1.924,5.738,2.904,8.872,2.904c2.313,0,4.637-0.535,6.778-1.62
@@ -65,9 +63,7 @@
 			L445.913,256.002z" />
             </g>
         </svg>
-        <svg version="1.1" class="music__off hide" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-            style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
+        <svg version="1.1" class="music__off hide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
             <g>
                 <path d="M262.8,57.9c-5-2.6-11.1-2.1-15.6,1.3l-116.5,85.5H15c-8.3,0-15,6.7-15,15v192.8c0,8.3,6.7,15,15,15h115.6l116.5,85.5
 			            c2.6,1.9,5.7,2.9,8.9,2.9c2.3,0,4.6-0.5,6.8-1.6c5-2.6,8.2-7.7,8.2-13.4V71.2C271,65.6,267.8,60.4,262.8,57.9z M241,411.2
@@ -84,14 +80,12 @@
 
     <div class="infos">
         <h2 id="a_propos">?</h2>
-        <svg class="popup__close hide" width="143" height="147" viewBox="0 0 143 147" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
+        <svg class="popup__close hide" width="143" height="147" viewBox="0 0 143 147" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d)">
                 <path d="M104.951 54.6003L60.3503 131.85L15.75 54.6003L104.951 54.6003Z" fill="currentColor" />
             </g>
             <defs>
-                <filter id="filter0_d" x="0.75" y="0.975281" width="141.501" height="145.875"
-                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <filter id="filter0_d" x="0.75" y="0.975281" width="141.501" height="145.875" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
                     <feOffset />
@@ -103,8 +97,7 @@
             </defs>
         </svg>
 
-        <svg class="popup__open show" width="113" height="117" viewBox="0 0 113 117" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
+        <svg class="popup__open show" width="113" height="117" viewBox="0 0 113 117" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M89.9506 39.6003L45.3503 116.85L0.750003 39.6003L89.9506 39.6003Z" fill="currentColor" />
         </svg>
 
@@ -133,6 +126,27 @@
                         </li>
                     </ol>
                 </div>
+                <div class="maquette">
+                    <table>
+                        <tr>
+                            <th>
+                                <a href="pdf.php?url=./data/img/maquette.pdf" download="Maquette_Retrowave.pdf">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Télécharger la maquette</a>
+                                <?php
+                                $fichier = $_GET["url"];
+                                header('Content-Type: application/pdf');
+                                header('Content-Disposition: attachment; filename="nom.pdf"');
+                                $pdf = file_put_contents($temp, file_get_contents($fichier));
+                                echo $pdf;
+                                ?>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div class="right-side">
                 <div class="right-side_container">
@@ -144,8 +158,9 @@
                                     <h2>Alex Gattefossé</h2>
                                     <h3>UI/UX, Design</h3>
                                     <p>
-                                        Développement page d'acceuil (HTML,CSS,JS), Maquettage, Modification du curseur,
-                                        intégration de la musique, écran de chargement et HTML/CSS page principale,
+                                        Développement page d'acceuil (HTML, CSS, JS), maquettage, modification du
+                                        curseur,
+                                        intégration de la musique, loader et HTML/CSS/JS page principale,
                                         responsive. </p>
                                 </div>
                             </div>
@@ -155,7 +170,7 @@
                                     <h2>Killian Druguet</h2>
                                     <h3>Design</h3>
                                     <p>
-                                        HTML/CSS de la page principale, Maquettage, recherche des contenus, finitions
+                                        HTML/CSS de la 2e page, Maquettage, recherche du contenu, finitions
                                         CSS de la page d'accueil, réalisations de GIF sur After Effects, responsive.
                                     </p>
                                 </div>
@@ -181,7 +196,7 @@
     <img class="bg--mountains" src="./data/img/bg.svg" alt="background">
 
     <div class="link">
-        <a href="./contenu.html">
+        <a href="./contenu.php">
             Découvrez la tendance
         </a>
     </div>
@@ -269,14 +284,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <script src="https://unpkg.com/@barba/core"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script> -->
-
-    <!-- <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-    <script>
-        const swup = new Swup();
-    </script> -->
 
 </body>
 

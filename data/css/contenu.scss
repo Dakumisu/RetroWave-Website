@@ -284,40 +284,6 @@
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-@keyframes down{
-	0% {
-        transform: translate(20%, -40%);
-        opacity: 0;
-    }
-	100% {
-        transform: translate(20%, -90%);
-        opacity: 1;
-    }
-}
-
-@keyframes steam {
-	0% {
-		background-position: 0 0;
-	}
-	50% {
-		background-position: 400% 0;
-	}
-	100% {
-		background-position: 0 0;
-	}
-}
-
-@keyframes down-vroum{
-	0% {
-        transform: translate(-5%, -5%) rotateZ(0deg);
-        opacity: 0.8;
-    }
-	100% {
-        transform: translate(-5%, 10%) rotateZ(5deg);
-        opacity: 1;
-    }
-}
-
 #filtre{
     background-color: black;
     opacity: 0.5;
