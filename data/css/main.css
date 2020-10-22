@@ -432,6 +432,8 @@ body p, body ul, body li {
   -webkit-transition: .5s;
   transition: .5s;
   letter-spacing: 2px;
+  color: white;
+  top: 8vh;
   margin: auto;
   outline: none;
   border: none;
