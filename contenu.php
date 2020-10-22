@@ -45,10 +45,6 @@
             </g>
         </svg>
 
-        <div class="lien">
-        <a href="index.html" target="_blank" ><input type="button" value="Accueil"></a>
-        </div>
-
         <svg version="1.1" class="music__off hide" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
             style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
