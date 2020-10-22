@@ -14,6 +14,9 @@
   body {
     background-position: 50% 0%;
   }
+  .link-contenu {
+    top: 10vh;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -21,7 +24,7 @@
     display: none;
   }
   .container--slide_2 .content_texte {
-    top: 30vh !important;
+    top: 30vh;
   }
   .container--slide_3 .vroum {
     top: 12vh;
@@ -32,8 +35,15 @@
   .container--slide_3 .content_texte .text-3 {
     top: 5vh;
   }
-  .form1 button {
+  .form1 input[type="text"], .form1 textarea {
     font-size: 1.5vw !important;
+  }
+  .form1 span {
+    font-size: 2vw !important;
+  }
+  .form1 button {
+    width: 30vw !important;
+    font-size: 2vw !important;
   }
 }
 
@@ -76,8 +86,11 @@
     width: 65vw !important;
     height: unset !important;
   }
+  .link-contenu {
+    top: 8vh;
+  }
   .container--slide_2 .content_texte {
-    top: 25vh !important;
+    top: 25vh;
   }
   .container--slide_3 .vroum {
     top: 10vh;
@@ -90,7 +103,81 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 640px) {
+  .container--slide_2 h5 {
+    top: 4vh;
+  }
+  .container--slide_2 .content_texte {
+    top: 18vh;
+  }
+  .container--slide_3 .vroum {
+    top: 10vh;
+  }
+  .container--slide_3 .content_texte {
+    top: 15vh;
+  }
+  .container--slide_3 .content_texte .text-3 {
+    top: 5vh;
+  }
+  .form1 input[type="text"], .form1 textarea {
+    font-size: 2.5vw !important;
+  }
+  .form1 span {
+    font-size: 3vw !important;
+  }
+  .form1 button {
+    width: 40vw !important;
+    font-size: 3vw !important;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .container--slide_2 .content_texte {
+    top: 16vh;
+  }
+  .container--slide_3 .vroum {
+    top: 8vh;
+  }
+  .container--slide_3 .content_texte {
+    top: 15vh;
+  }
+  .container--slide_3 .content_texte .text-3 {
+    top: 2vh;
+  }
+  .container--footer_form h2 {
+    font-size: 7.5vw;
+  }
+  .form1 input[type="text"], .form1 textarea {
+    font-size: 2.5vw !important;
+  }
+  .form1 span {
+    font-size: 3vw !important;
+  }
+  .form1 button {
+    width: 60vw !important;
+    font-size: 4vw !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .link-contenu {
+    top: 6vh;
+  }
+  .container--slide_2 .content_texte {
+    top: 14vh;
+  }
+  .container--slide_3 .vroum {
+    top: 6vh;
+  }
+  .container--slide_3 .content_texte {
+    top: 14vh;
+  }
+  .container--slide_3 .content_texte .text-3 {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
   .left-side .titre h2 {
     font-size: 2em !important;
   }
@@ -105,6 +192,25 @@
   }
   .card .content h3 {
     font-size: 0.7em !important;
+  }
+  .container--slide_2 .content_texte {
+    top: 12vh;
+  }
+  .container--slide_3 .vroum {
+    top: 6vh;
+  }
+  .container--slide_3 .content_texte {
+    top: 12.5vh;
+  }
+  .container--slide_3 .content_texte .text-3 {
+    top: 0;
+  }
+  .container--footer_form {
+    top: -15vh;
+  }
+  .container--footer_form h2 {
+    font-size: 7vw;
+    top: 0;
   }
 }
 
