@@ -431,6 +431,7 @@ body p, body ul, body li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  justify-items: center;
 }
 
 .infos .container-popup .left-side .maquette button {
@@ -439,16 +440,17 @@ body p, body ul, body li {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  padding: 10px 20px;
   -webkit-transition: .5s;
   transition: .5s;
   letter-spacing: 2px;
+  padding: 15px;
   top: 5vh;
   margin: auto;
   outline: none;
   border: none;
   border-radius: 5px;
   background-color: transparent;
+  text-align: center;
 }
 
 .infos .container-popup .left-side .maquette button:hover {
@@ -459,6 +461,7 @@ body p, body ul, body li {
 }
 
 .infos .container-popup .left-side .maquette button a {
+  padding: 10px 20px;
   text-decoration: none;
   outline: none;
   border: none;
@@ -588,6 +591,17 @@ body p, body ul, body li {
   color: #ff4365;
   font-size: 1em;
   text-shadow: 0px 0px 30px #ff4365;
+  font-family: Lazer84;
+  letter-spacing: 2px;
+}
+
+.infos .container-popup .right-side_container .card--2 span {
+  overflow: hidden;
+  position: relative;
+}
+
+.infos .container-popup .right-side_container .card--2 span img {
+  width: 100%;
 }
 
 .infos .container-popup .right-side_container .map {

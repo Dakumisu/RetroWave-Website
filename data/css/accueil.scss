@@ -306,20 +306,21 @@
             .maquette {
                 display: flex;
                 justify-content: center;
+                justify-items: center;
                 button {
                     overflow: hidden;
                     width: fit-content;
                     position: relative;
-                    padding: 10px 20px;
                     transition: .5s;
                     letter-spacing: 2px;
-                    // width: 20vw;
+                    padding: 15px;
                     top: 5vh;
                     margin: auto;
                     outline: none;
                     border: none;
                     border-radius: 5px;
                     background-color: transparent;
+                    text-align: center;
                     &:hover {
                         background: $jaune;
                         border-radius: 5px;
@@ -329,6 +330,7 @@
                                     0 0 100px $jaune;
                       }
                     a {
+                        padding: 10px 20px;
                         text-decoration: none;
                         outline: none;
                         border: none;
@@ -425,6 +427,18 @@
                   
                         h3 {
                             @include subtitle($rouge, 1%, 1em);
+                            font-family: Lazer84;
+                            letter-spacing: 2px;
+                        }
+                    }
+
+                    &--2 {
+                        span {
+                            overflow: hidden;
+                            position: relative;                            
+                            img {
+                                width: 100%
+                            }
                         }
                     }
                 }

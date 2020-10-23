@@ -109,7 +109,7 @@
                 <div class="theme">
                     <h3>Le projet</h3>
                     <p>Ce site a été réalisé dans le cadre d'un projet en MMI à Tarbes. Après avoir réalisé notre
-                        maquette, le site été développé dans les langages CSS, HTML, et JavaScript. Nous avons tenter de
+                        maquette, le site été développé dans les langages CSS, HTML, et JavaScript. Nous avons tenté de
                         créer un maximum d'animations en CSS.</p>
                 </div>
                 <div class="roles">
@@ -131,20 +131,13 @@
                         <tr>
                             <th>
                                 <button>
-                                    <a href="pdf.php?url=./data/img/maquette.pdf" download="Maquette_Retrowave.pdf">
+                                    <a href="./data/img/maquette.pdf" download="Maquette_Retrowave.pdf">
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                         Télécharger la maquette</a>
                                 </button>
-                                <?php
-                                $fichier = $_GET["url"];
-                                header('Content-Type: application/pdf');
-                                header('Content-Disposition: attachment; filename="nom.pdf"');
-                                $pdf = file_put_contents($temp, file_get_contents($fichier));
-                                echo $pdf;
-                                ?>
                             </th>
                         </tr>
                     </table>
@@ -167,7 +160,9 @@
                                 </div>
                             </div>
                             <div class="card card--2">
-                                <img src="./data/img/kiki.png" alt="kikinou">
+                                <span>
+                                    <img src="./data/img/logo_kd.gif" alt="kikinou">
+                                </span>
                                 <div class="content">
                                     <h2>Killian Druguet</h2>
                                     <h3>Design</h3>

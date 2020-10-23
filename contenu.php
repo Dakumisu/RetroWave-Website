@@ -29,9 +29,7 @@
 
     <audio class="music--audio" src="./data/music/siames-summer-nights.mp3"></audio>
     <div class="music--container">
-        <svg version="1.1" class="music__on show" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-            style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
+        <svg version="1.1" class="music__on show" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
             <g>
                 <path d="M262.78,57.853c-5.042-2.556-11.091-2.059-15.65,1.284l-116.54,85.462H15c-8.284,0-15,6.716-15,15V352.4
 			c0,8.284,6.716,15,15,15h115.59l116.54,85.462c2.622,1.924,5.738,2.904,8.872,2.904c2.313,0,4.637-0.535,6.778-1.62
@@ -45,9 +43,7 @@
             </g>
         </svg>
 
-        <svg version="1.1" class="music__off hide" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-            style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
+        <svg version="1.1" class="music__off hide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="currentColor">
             <g>
                 <path d="M262.8,57.9c-5-2.6-11.1-2.1-15.6,1.3l-116.5,85.5H15c-8.3,0-15,6.7-15,15v192.8c0,8.3,6.7,15,15,15h115.6l116.5,85.5
 			            c2.6,1.9,5.7,2.9,8.9,2.9c2.3,0,4.6-0.5,6.8-1.6c5-2.6,8.2-7.7,8.2-13.4V71.2C271,65.6,267.8,60.4,262.8,57.9z M241,411.2
@@ -63,7 +59,7 @@
     </div>
 
     <div class="link link-contenu">
-        <a href="./index.php">
+        <a href="./index.html">
             <span></span>
             <span></span>
             <span></span>
@@ -81,8 +77,7 @@
 
 
         <div class="split_slide split_slide--trait split_slide--trait_1"></div>
-        <svg class="split_slide--triangle split_slide--triangle_1" viewBox="0 0 67 83" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
+        <svg class="split_slide--triangle split_slide--triangle_1" viewBox="0 0 67 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M33.5 83L4.48815 50L62.5119 50L33.5 83Z" />
             <path d="M33.5 44L4.48815 11L62.5119 11L33.5 44Z" />
         </svg>
@@ -119,8 +114,7 @@
 
 
         <div class="split_slide split_slide--trait split_slide--trait_3"></div>
-        <svg class="split_slide--triangle split_slide--triangle_2" viewBox="0 0 67 83" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
+        <svg class="split_slide--triangle split_slide--triangle_2" viewBox="0 0 67 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M33.5 83L4.48815 50L62.5119 50L33.5 83Z" />
             <path d="M33.5 44L4.48815 11L62.5119 11L33.5 44Z" />
         </svg>
@@ -156,8 +150,7 @@
         </section>
 
         <div class="split_slide split_slide--trait split_slide--trait_5"></div>
-        <svg class="split_slide--triangle split_slide--triangle_3" viewBox="0 0 67 83" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
+        <svg class="split_slide--triangle split_slide--triangle_3" viewBox="0 0 67 83" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M33.5 83L4.48815 50L62.5119 50L33.5 83Z" />
             <path d="M33.5 44L4.48815 11L62.5119 11L33.5 44Z" />
         </svg>
@@ -165,16 +158,8 @@
 
 
         <section class="container--slide container--footer">
-            <h2 style="font-size: 3vh;">Nous contacter</h2>
-            <form action="" method="POST">
-                <div class="form1">
-                    <div class="col">
-                        <div class="inputbox">
-                            <input type="text" name="" required="required">
-                            <span class="text">Nom</span>
-                            <span class="line"></span>
-            <div class="container--footer_form">
 
+            <div class="container--footer_form">
                 <h2>Nous contacter</h2>
                 <form action="" method="POST">
                     <div class="form1">
@@ -187,8 +172,7 @@
                         </div>
                         <div class="col">
                             <div class="inputbox">
-                                <input type="email" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}"
-                                    name="mail" required="required">
+                                <input type="email" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}" name="mail" required="required">
                                 <span class="text">E-mail</span>
                                 <span class="line"></span>
                             </div>
@@ -210,32 +194,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="form1">
-                    <div class="col">
-                        <input type="submit" value="Envoyer">
-                    </div>
-                </div>
-            </form>
-
-            <div class="login-box">
-                <h2 style="font-size: 2vh;">Nous contacter</h2>
-                <form action="" method="POST">
-                    <div class="user-box">
-                        <input type="text" name="" required="">
-                        <label>Nom</label>
-                    </div>
-                    <div class="user-box">
-                        <input type="email" name="" required="">
-                        <label>E-mail</label>
-                    </div>
-                    <div class="user-box">
-                        <input type="text" name="" required="">
-                        <label>Objet</label>
-                    </div>
-                    <div class="user-box">
-                        <input type="text" name="" required="">
-                        <label>Message</label>
                     <div class="form1">
                         <div class="col col__button">
                             <button name="send" class="text">
@@ -243,13 +201,15 @@
                                 <span></span>
                                 <span></span>
                                 <span></span>
-                                Submit
+                                Envoyer
                             </button>
                         </div>
                     </div>
                 </form>
+            </div>
 
-                <?php
+
+            <?php
             if (isset($_POST['send'])) {
                 $destinataire = "dakumisu.psd@gmail.com";
                 $objet = "Objet : " . $_POST['objet'];
